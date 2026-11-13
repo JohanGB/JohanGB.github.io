@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan García · Datos con trazabilidad</title>
+<meta name="description" content="Portafolio de Johan Esteban García Bautista: físico y analista de datos. Proyectos de datos, aprendizaje automático y software en los que cada cifra se puede rastrear hasta su origen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papel: #F5F8F7;      /* papel milimetrado, frío */
+    --reticula: #DCE7E4;   /* línea de la retícula */
+    --tinta: #16233F;      /* tinta azul de cuaderno */
+    --tinta-suave: #4A5A78;
+    --resaltador: #F4E76E; /* marcador sobre lo medido */
+    --verificado: #0E6B5C; /* sello de comprobado */
+    --medida: 1.5rem;      /* módulo de la retícula */
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body {
+    margin: 0;
+    font-family: "Schibsted Grotesk", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--tinta);
+    background-color: var(--papel);
+    background-image:
+      linear-gradient(var(--reticula) 1px, transparent 1px),
+      linear-gradient(90deg, var(--reticula) 1px, transparent 1px);
+    background-size: var(--medida) var(--medida);
+    font-variant-numeric: tabular-nums;
+  }
+  a { color: inherit; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--verificado); outline-offset: 3px; border-radius: 2px; }
+
+  /* idioma */
+  html[lang="es"] [lang="en"]:not(html), html[lang="en"] [lang="es"]:not(html) { display: none !important; }
+
+  .marco { display: grid; grid-template-columns: minmax(15rem, 19rem) 1fr; gap: 0 4.5rem; max-width: 76rem; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+  /* ficha lateral */
+  .ficha { position: sticky; top: 3rem; align-self: start; }
+  .ficha h1 { font-size: 1.6rem; line-height: 1.15; font-weight: 800; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .ficha .rol { color: var(--tinta-suave); margin: 0 0 1.5rem; }
+  .ficha dl { margin: 0 0 1.75rem; display: grid; grid-template-columns: auto 1fr; gap: .35rem .9rem; font-size: .95rem; }
+  .ficha dt { color: var(--tinta-suave); }
+  .ficha dd { margin: 0; }
+  .contacto { list-style: none; padding: 0; margin: 0 0 1.75rem; display: grid; gap: .4rem; }
+  .idioma { display: inline-flex; border: 1.5px solid var(--tinta); border-radius: 999px; overflow: hidden; }
+  .idioma button { font: inherit; font-size: .9rem; background: transparent; color: var(--tinta); border: 0; padding: .3rem .9rem; cursor: pointer; }
+  .idioma button[aria-pressed="true"] { background: var(--tinta); color: var(--papel); }
+
+  /* tesis */
+  .tesis { padding: .5rem 0 3.5rem; border-bottom: 2px solid var(--tinta); margin-bottom: 1rem; }
+  .tesis p.grande {
+    font-size: clamp(2rem, 4.2vw, 3.35rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    margin: 0 0 1.75rem;
+    max-width: 18ch;
+  }
+  .tesis p.grande .traza { display: block; font-weight: 400; font-style: italic; color: var(--tinta-suave); }
+  .tesis p.cuerpo { max-width: 60ch; margin: 0; color: var(--tinta-suave); }
+
+  /* bitácora de proyectos */
+  .proyecto { display: grid; grid-template-columns: 1fr; padding: 2.75rem 0; border-bottom: 1px solid var(--tinta); background: linear-gradient(var(--papel), var(--papel)) padding-box; }
+  .proyecto header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem; margin-bottom: .6rem; }
+  .proyecto h2 { font-size: 1.85rem; line-height: 1.1; margin: 0; font-weight: 800; letter-spacing: -.015em; }
+  .proyecto .pregunta { font-size: 1.2rem; line-height: 1.4; margin: 0 0 1.4rem; max-width: 52ch; }
+  .enlaces { display: flex; gap: 1.1rem; font-size: .95rem; }
+  .comprobado {
+    width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: .97rem; background: var(--papel);
+  }
+  .comprobado caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+  .comprobado th, .comprobado td { text-align: left; vertical-align: top; padding: .55rem .9rem .55rem 0; border-top: 1px solid var(--reticula); }
+  .comprobado thead th { font-weight: 500; color: var(--tinta-suave); border-top: 0; font-size: .88rem; }
+  .comprobado { table-layout: fixed; }
+  .comprobado td:nth-child(-n+2) { width: 42%; }
+  mark { background: linear-gradient(transparent 12%, var(--resaltador) 12%, var(--resaltador) 88%, transparent 88%); color: inherit; padding: 0 .12em; }
+  .pie-proyecto { display: flex; flex-wrap: wrap; gap: .4rem 1.75rem; font-size: .92rem; color: var(--tinta-suave); }
+  .pie-proyecto strong { color: var(--verificado); font-weight: 700; }
+  .estado { color: var(--tinta-suave); font-size: .92rem; }
+
+  .investigacion { padding: 2.5rem 0 0; }
+  .investigacion h2 { font-size: 1.35rem; margin: 0 0 .75rem; }
+  .investigacion ul { margin: 0; padding-left: 1.1rem; max-width: 62ch; }
+  .investigacion li { margin-bottom: .5rem; }
+  footer.final { margin-top: 3.5rem; font-size: .9rem; color: var(--tinta-suave); max-width: 62ch; }
+
+  @media (max-width: 860px) {
+    .marco { grid-template-columns: 1fr; padding: 2rem 1.25rem 4rem; }
+    .ficha { position: static; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 2px solid var(--tinta); }
+    .tesis { border-bottom: 1px solid var(--tinta); }
+    .comprobado td:nth-child(-n+2) { width: auto; }
+    .comprobado thead { display: none; }
+    .comprobado tr { display: block; padding: .6rem 0; border-top: 1px solid var(--reticula); }
+    .comprobado td { display: block; border: 0; padding: .1rem 0; }
+    .comprobado td + td { color: var(--tinta-suave); }
+  }
+</style>
+</head>
+<body>
+<div class="marco">
+
+  <aside class="ficha" aria-label="Perfil">
+    <h1>Johan Esteban García Bautista</h1>
+    <p class="rol">
+      <span lang="es">Físico y analista de datos. Busco roles actuariales y de datos en seguros y banca.</span>
+      <span lang="en">Physicist and data analyst. Looking for actuarial and data roles in insurance and banking.</span>
+    </p>
+    <dl>
+      <dt lang="es">Formación</dt><dt lang="en">Education</dt>
+      <dd lang="es">Física, Universidad de los Andes</dd><dd lang="en">B.Sc. Physics, Universidad de los Andes</dd>
+      <dt lang="es">Experiencia</dt><dt lang="en">Experience</dt>
+      <dd lang="es">Analista de datos en consultoría, 2 años</dd><dd lang="en">Data analyst in consulting, 2 years</dd>
+      <dt lang="es">Base</dt><dt lang="en">Based in</dt>
+      <dd>Bogotá, Colombia</dd>
+      <dt lang="es">Idiomas</dt><dt lang="en">Languages</dt>
+      <dd lang="es">Español nativo, inglés B2+</dd><dd lang="en">Spanish (native), English B2+</dd>
+    </dl>
+    <ul class="contacto">
+      <li><a href="mailto:johanesteban2003@gmail.com">johanesteban2003@gmail.com</a></li>
+      <li><a href="https://github.com/JohanGB">github.com/JohanGB</a></li>
+    </ul>
+    <div class="idioma" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">Español</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="tesis">
+      <p class="grande" lang="es">Herramientas de datos que muestran de dónde sale cada cifra.<span class="traza">Y cómo se comprobó.</span></p>
+      <p class="grande" lang="en">Data tools that show where every number comes from.<span class="traza">And how it was checked.</span></p>
+      <p class="cuerpo" lang="es">Seis proyectos propios con datos reales de Colombia: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir: 601 en total.</p>
+      <p class="cuerpo" lang="en">Six personal projects built on real Colombian data: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun: 601 in total.</p>
+    </section>
+
+    <!-- Mercado al Día -->
+    <article class="proyecto" id="mercado-al-dia">
+      <header>
+        <h2>Mercado al Día</h2>
+        <nav class="enlaces" aria-label="Mercado al Día">
+          <a href="https://github.com/JohanGB/mercado-al-dia"><span lang="es">Código</span><span lang="en">Code</span></a>
+          <a href="https://github.com/JohanGB/mercado-al-dia/blob/main/docs/demo/mercado.html"><span lang="es">Página publicada</span><span lang="en">Published page</span></a>
+        </nav>
+      </header>
+      <p class="pregunta" lang="es">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
+      <p class="pregunta" lang="en">What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Pronóstico a 1 mes con error típico de <mark>9,2 %</mark></td><td lang="en">1-month forecast with <mark>9.2 %</mark> typical error</td>
+              <td lang="es">LightGBM, prueba única 2023-11 a 2026-09 fijada antes de mirar resultados; origen rodante sin fuga</td><td lang="en">LightGBM, single held-out test 2023-11 to 2026-09 fixed in advance; leak-free rolling origin</td></tr>
+          <tr><td lang="es">Rangos del 80 % que cubrieron el <mark>82,6–83,3 %</mark></td><td lang="en">80 % intervals that covered <mark>82.6–83.3 %</mark></td>
+              <td lang="es">Calibración conformal (CQR) por horizonte</td><td lang="en">Conformal calibration (CQR) per horizon</td></tr>
+          <tr><td lang="es">N-BEATS (aprendizaje profundo) no se desplegó</td><td lang="en">N-BEATS (deep learning) was not deployed</td>
+              <td lang="es">Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap</td><td lang="en">Lost to the naive model on every horizon; the rule requires a win with a 90 % bootstrap CI</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>51</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, pandas, LightGBM, statsmodels, JAX</span><span lang="es">Datos: SIPSA (DANE), NOAA</span><span lang="en">Data: SIPSA (DANE), NOAA</span></div>
+    </article>
+
+    <!-- Factura Viva -->
+    <article class="proyecto" id="factura-viva">
+      <header>
+        <h2>Factura Viva</h2>
+        <nav class="enlaces" aria-label="Factura Viva"><a href="https://github.com/JohanGB/factura-viva"><span lang="es">Código</span><span lang="en">Code</span></a></nav>
+      </header>
+      <p class="pregunta" lang="es">¿En qué se fue la plata, cuánto salió de verdad de mis cuentas y cuánto puedo deducir en renta por mis facturas electrónicas?</p>
+      <p class="pregunta" lang="en">Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Facturas DIAN leídas desde el ZIP del correo</td><td lang="en">DIAN invoices parsed straight from the email ZIP</td>
+              <td lang="es"><mark>9 chequeos</mark> por factura: líneas más impuestos igual al total, CUFE y validación DIAN</td><td lang="en"><mark>9 checks</mark> per invoice: lines plus taxes equal total, CUFE and DIAN validation</td></tr>
+          <tr><td lang="es">Extractos de 5 productos bancarios</td><td lang="en">Statements from 5 bank products</td>
+              <td lang="es">Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a revisión en vez de adivinar</td><td lang="en">Opening balance plus movements must equal closing balance; otherwise it goes to review instead of guessing</td></tr>
+          <tr><td lang="es">Deducción del 1 % en renta (art. 336-5)</td><td lang="en">1 % income tax deduction (art. 336-5)</td>
+              <td lang="es">Reglas tributarias como datos, con fuente y vigencia; cada fila apunta a su archivo y huella SHA-256</td><td lang="en">Tax rules as data with source and validity; each row points to its file and SHA-256 fingerprint</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>93</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, pdfplumber, UBL 2.1, YAML</span><span lang="es">Los datos personales nunca salen del equipo</span><span lang="en">Personal data never leaves the device</span></div>
+    </article>
+
+    <!-- Nómina Clara -->
+    <article class="proyecto" id="nomina-clara">
+      <header>
+        <h2>Nómina Clara</h2>
+        <nav class="enlaces" aria-label="Nómina Clara"><a href="https://github.com/JohanGB/nomina-clara"><span lang="es">Código</span><span lang="en">Code</span></a></nav>
+      </header>
+      <p class="pregunta" lang="es">¿Cuánto cuesta de verdad un turno, una hora extra o una liquidación, ahora que la Ley 2466 cambia las reglas por fechas?</p>
+      <p class="pregunta" lang="en">What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Recargos calculados minuto a minuto con la regla vigente ese día</td><td lang="en">Surcharges computed minute by minute with the rule in force that day</td>
+              <td lang="es"><mark>36 reglas</mark> con norma, artículo, URL oficial, fecha de consulta y cita textual</td><td lang="en"><mark>36 rules</mark> with norm, article, official URL, consultation date and literal quote</td></tr>
+          <tr><td lang="es">Liquidación completa: cesantías, intereses, prima, vacaciones e indemnización</td><td lang="en">Full settlement: severance, interest, bonus, vacation and indemnity</td>
+              <td lang="es">El cargador rechaza una regla marcada como verificada si no tiene fuente primaria</td><td lang="en">The loader rejects any rule marked verified without a primary source</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>72</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, hypothesis, YAML</span><span lang="es">No es asesoría jurídica</span><span lang="en">Not legal advice</span></div>
+    </article>
+
+    <!-- MyCents -->
+    <article class="proyecto" id="mycents">
+      <header>
+        <h2>MyCents</h2>
+        <nav class="enlaces" aria-label="MyCents"><a href="https://github.com/JohanGB/App_HomeFinance"><span lang="es">Código</span><span lang="en">Code</span></a></nav>
+      </header>
+      <p class="pregunta" lang="es">Finanzas personales que viven en tu equipo y se respaldan en Google Drive sin pisar nunca tus datos.</p>
+      <p class="pregunta" lang="en">Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Vista mensual en <mark>11 ms</mark> sobre un millón de gastos</td><td lang="en">Monthly view in <mark>11 ms</mark> over one million expenses</td>
+              <td lang="es">Índice cubriente en SQLite frente a 1.133 ms y 364 MB cargando todo en pandas</td><td lang="en">Covering SQLite index vs. 1,133 ms and 364 MB loading everything into pandas</td></tr>
+          <tr><td lang="es">Sincronización que nunca fusiona a ciegas</td><td lang="en">Sync that never merges blindly</td>
+              <td lang="es">Matriz local/remoto con conflicto explícito; descargas validadas con MD5 e integridad antes de reemplazar</td><td lang="en">Local/remote matrix with explicit conflicts; downloads validated with MD5 and integrity checks before replacing</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>195</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, Flet, SQLite, Google Drive API</span><span lang="es">Windows y Android</span><span lang="en">Windows and Android</span></div>
+    </article>
+
+    <!-- Gaze -->
+    <article class="proyecto" id="gaze">
+      <header>
+        <h2 lang="es">Seguimiento de mirada</h2><h2 lang="en">Gaze tracker</h2>
+        <nav class="enlaces" aria-label="Gaze tracker"><a href="https://github.com/JohanGB/visual-follower"><span lang="es">Código</span><span lang="en">Code</span></a></nav>
+      </header>
+      <p class="pregunta" lang="es">¿Hacia dónde miras en la pantalla, usando solo la webcam y sin que ningún fotograma salga del equipo?</p>
+      <p class="pregunta" lang="en">Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Error con la cabeza girada 20°: de 532 px a <mark>87 px</mark></td><td lang="en">Error with the head turned 20°: from 532 px to <mark>87 px</mark></td>
+              <td lang="es">Geometría 3D del ojo frente al método clásico, en un simulador con verdad conocida</td><td lang="en">3D eye geometry vs. the classic method, in a simulator with known ground truth</td></tr>
+          <tr><td lang="es">Validación honesta</td><td lang="en">Honest validation</td>
+              <td lang="es">Los puntos fijos nunca entran al entrenamiento; exactitud y temblor se reportan por separado</td><td lang="en">Fixed points never enter training; accuracy and jitter are reported separately</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>86</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, MediaPipe, OpenCV, scikit-learn, PyQt6</span></div>
+    </article>
+
+    <!-- Sonda -->
+    <article class="proyecto" id="sonda">
+      <header>
+        <h2>Sonda</h2>
+        <nav class="enlaces" aria-label="Sonda"><a href="https://github.com/JohanGB/sonda"><span lang="es">Código</span><span lang="en">Code</span></a></nav>
+      </header>
+      <p class="pregunta" lang="es">¿Qué aplicación se está comiendo la memoria o la CPU de tu PC, sin que el monitor mismo la gaste?</p>
+      <p class="pregunta" lang="en">Which app is eating your PC's memory or CPU, without the monitor itself wasting them?</p>
+      <table class="comprobado">
+        <thead><tr><th lang="es">Resultado</th><th lang="en">Result</th><th lang="es">Cómo se comprobó</th><th lang="en">How it was checked</th></tr></thead>
+        <tbody>
+          <tr><td lang="es">Modo juego con <mark>0 ms</mark> de CPU y 0 KB escritos</td><td lang="en">Gaming mode at <mark>0 ms</mark> CPU and 0 KB written</td>
+              <td lang="es">Medido durante 5 minutos reales; un único reloj en toda la aplicación</td><td lang="en">Measured over 5 real minutes; a single clock in the whole app</td></tr>
+          <tr><td lang="es">Fugas de memoria detectadas en el 99,4–100 % de los casos</td><td lang="en">Memory leaks detected in 99.4–100 % of cases</td>
+              <td lang="es">5.000 series sintéticas; tau de Kendall y pendiente de Theil-Sen para no confundir una fuga con una caché</td><td lang="en">5,000 synthetic series; Kendall's tau and Theil–Sen slope to tell a leak from a cache</td></tr>
+        </tbody>
+      </table>
+      <div class="pie-proyecto"><span><strong>107</strong> <span lang="es">pruebas</span><span lang="en">tests</span></span><span>Python, psutil, SQLite, PyQt6</span><span lang="es">Solo lectura comprobado por análisis del código</span><span lang="en">Read-only enforced by code analysis</span></div>
+    </article>
+
+    <section class="investigacion" aria-labelledby="inv">
+      <h2 id="inv" lang="es">Investigación</h2><h2 lang="en">Research</h2>
+      <ul>
+        <li lang="es"><a href="https://github.com/JohanGB/Proyect-Scotogenic-Model">Modelo escotogénico</a>: análisis de datos fenomenológicos de física más allá del Modelo Estándar, Universidad de los Andes (2023–2024).</li>
+        <li lang="en"><a href="https://github.com/JohanGB/Proyect-Scotogenic-Model">Scotogenic model</a>: phenomenological data analysis in beyond-the-Standard-Model physics, Universidad de los Andes (2023–2024).</li>
+        <li lang="es">Simulación computacional y análisis de imágenes médicas: segmentación y análisis cuantitativo de regiones de interés (2023).</li>
+        <li lang="en">Computational simulation and medical image analysis: segmentation and quantitative region-of-interest analysis (2023).</li>
+      </ul>
+    </section>
+
+    <footer class="final">
+      <p lang="es">Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en <em>docs/uso_de_ia.md</em>.</p>
+      <p lang="en">I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in <em>docs/uso_de_ia.md</em>.</p>
+    </footer>
+  </main>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    function poner(lang) {
+      root.setAttribute('lang', lang);
+      document.querySelectorAll('.idioma button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+      try { localStorage.setItem('idioma', lang); } catch (e) {}
+    }
+    var guardado = null;
+    try { guardado = localStorage.getItem('idioma'); } catch (e) {}
+    poner(guardado || ((navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en'));
+    document.querySelectorAll('.idioma button').forEach(function (b) { b.addEventListener('click', function () { poner(b.dataset.lang); }); });
+  })();
+</script>
+</body>
+</html>
