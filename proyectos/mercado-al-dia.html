@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mercado al Día · Johan García</title>
+<meta name="description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
+<meta name="author" content="Johan Esteban García Bautista">
+<link rel="canonical" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
+<link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
+<link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/mercado-al-dia.html">
+<link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Johan García">
+<meta property="og:title" content="Mercado al Día · Johan García">
+<meta property="og:description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
+<meta property="og:url" content="https://johangb.github.io/proyectos/mercado-al-dia.html">
+<meta property="og:image" content="https://johangb.github.io/assets/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mercado al Día · Johan García">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mercado al Día · Johan García">
+<meta name="twitter:description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
+<meta name="twitter:image" content="https://johangb.github.io/assets/img/og-es.png">
+<meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1218" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibmplexsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fuentes.css">
+<link rel="stylesheet" href="/assets/css/sitio.css">
+<script>try{var t=localStorage.getItem('tema');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a><header class="barra">
+  <div class="contenedor barra__in">
+    <a class="barra__marca" href="/">Johan García</a>
+    <nav class="barra__nav" aria-label="Navegación principal">
+      <a href="/#proyectos">Proyectos</a><a href="/#metodo">Cómo trabajo</a><a href="/#investigacion">Investigación</a><a href="/#experiencia">Experiencia</a><a href="/#contacto">Contacto</a>
+    </nav>
+    <div class="controles">
+      <div class="seg" role="group" aria-label="Idioma"><a href="/proyectos/mercado-al-dia.html" hreflang="es" lang="es" data-idioma="es" aria-current="true">ES</a><a href="/en/projects/mercado-al-dia.html" hreflang="en" lang="en" data-idioma="en">EN</a></div>
+      <button class="icono-btn" type="button" data-tema data-etiqueta-oscuro="Cambiar a tema oscuro" data-etiqueta-claro="Cambiar a tema claro" aria-label="Cambiar a tema oscuro" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/#proyectos">Proyectos</a> / <span aria-current="page">Mercado al Día</span></nav>
+    <header class="detalle__cabeza">
+      <p class="etiqueta">Pronóstico de precios · <span class="num">50</span> pruebas en CI</p>
+      <h1 class="detalle__titulo">Mercado al Día</h1>
+      <p class="detalle__pregunta">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
+      <div class="portada__cta" style="margin-bottom:48px">
+        <a class="btn btn--primario" href="https://github.com/JohanGB/NowMarket">Código</a>
+        <a class="btn" href="/demo/mercado.html">Página publicada</a>
+      </div>
+      <div class="detalle__resumen">
+        <div>
+          <p class="etiqueta">Resultado principal</p>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9,2 %: fuente y método">9,2<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9,2 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>LightGBM, prueba única 2023-11 a 2026-09 fijada antes de mirar resultados; origen rodante sin fuga</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
+          <p class="tarjeta__grande-etiqueta">error típico del pronóstico a 1 mes</p>
+        </div>
+        <div>
+          <p class="etiqueta">Cómo se comprobó</p>
+          <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 82,6–83,3 %</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap</span></li></ul>
+        </div>
+      </div>
+      <figure class="figura detalle__figura"><img src="/assets/img/mercado-al-dia.webp" width="1200" height="750" alt="Página publicada de Mercado al Día con precios del mes" decoding="async"><figcaption>Página publicada, generada por el propio proyecto.</figcaption></figure>
+    </header>
+    <div class="capitulos">
+      <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problema</h2><div class="capitulo__texto"><p>Responde qué está barato este mes, en qué meses suele subir cada producto y cuánto costará en 1, 2 y 3 meses, con precios mayoristas de Bogotá y la Sabana y Corabastos como referencia.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Datos</h2><div class="capitulo__texto"><ul><li>Series mensuales de precios mayoristas y abastecimiento del SIPSA (DANE) e índice ONI de El Niño (NOAA CPC).</li><li>Los datos crudos no se redistribuyen: el script los descarga y registra su huella SHA-256. Cada precio cita el archivo, la hoja y la fila de la hoja de cálculo del DANE.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><ul><li>Perfil estacional con media móvil 2×12 sobre logaritmos de precio.</li><li>LightGBM a 1 mes e ingenuo calibrado a 2 y 3 meses, con rangos del 80 % por calibración conformal (CQR).</li><li>SARIMAX con el índice ONI no mejoró de forma significativa al ingenuo; N-BEATS perdió en todos los horizontes.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).</li><li>Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.</li><li>El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.</li><li>51 pruebas automáticas que corren sin internet; en la CI pasan 50 y 1 se omite.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>El SIPSA mide el precio de venta mayorista en la central de abastos, con IVA, en pesos de cada mes. En una tienda el precio es mayor (transporte, mermas, margen). Sirve para anticipar subidas, bajadas y temporadas, no para saber cuánto pagará en la tienda.</li><li>No es asesoría financiera.</li></ul></div></section>
+    </div>
+    <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md">Uso de IA documentado en este proyecto →</a></p>
+    <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
+      <h2 class="etiqueta" id="t-otros">Otros proyectos</h2>
+      <ul class="otros">
+        <li><a href="/proyectos/factura-viva.html"><b>Factura Viva</b><span>¿En qué se fue la plata, cuánto salió de verdad de mis cuentas y cuánto puedo deducir en renta por mis facturas electrónicas?</span></a></li>
+        <li><a href="/proyectos/nomina-clara.html"><b>Nómina Clara</b><span>¿Cuánto cuesta de verdad un turno, una hora extra o una liquidación, ahora que la Ley 2466 cambia las reglas por fechas?</span></a></li>
+        <li><a href="/proyectos/mycents.html"><b>MyCents</b><span>Finanzas personales que viven en tu equipo y se respaldan en Google Drive sin pisar nunca tus datos.</span></a></li>
+        <li><a href="/proyectos/seguimiento-de-mirada.html"><b>Seguimiento de mirada</b><span>¿Hacia dónde miras en la pantalla, usando solo la webcam y sin que ningún fotograma salga del equipo?</span></a></li>
+        <li><a href="/proyectos/huella.html"><b>Huella</b><span>¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?</span></a></li>
+      </ul>
+      <p class="enlaces" style="margin-top:24px"><a href="/#proyectos">← Todos los proyectos</a></p>
+    </section>
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en docs/uso_de_ia.md.</p>
+    <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Código de este sitio</a></p>
+  </div>
+</footer>
+<script src="/assets/js/sitio.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johangb.github.io/sitemap.xml

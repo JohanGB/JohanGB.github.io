@@ -1,0 +1,149 @@
+{
+  "url": "https://johangb.github.io",
+  "nombre": "Johan Esteban García Bautista",
+  "nombreCorto": "Johan García",
+  "titulo": { "es": "Johan García · Datos con trazabilidad", "en": "Johan García · Traceable data" },
+  "descripcion": {
+    "es": "Portafolio de Johan Esteban García Bautista: físico y analista de datos. Proyectos de datos, aprendizaje automático y software en los que cada cifra se puede rastrear hasta su origen.",
+    "en": "Portfolio of Johan Esteban García Bautista: physicist and data analyst. Data, machine learning and software projects where every number can be traced back to its source."
+  },
+  "rol": {
+    "es": "Físico y analista de datos. Busco roles actuariales y de datos en seguros y banca.",
+    "en": "Physicist and data analyst. Looking for actuarial and data roles in insurance and banking."
+  },
+  "promesa": {
+    "es": ["Herramientas de datos que muestran de dónde sale cada cifra.", "Y cómo se comprobó."],
+    "en": ["Data tools that show where every number comes from.", "And how it was checked."]
+  },
+  "cuerpo": {
+    "es": "Seis proyectos propios con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir.",
+    "en": "Six personal projects built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun."
+  },
+  "ficha": [
+    { "k": { "es": "Formación", "en": "Education" }, "v": { "es": "Física, Universidad de los Andes", "en": "B.Sc. Physics, Universidad de los Andes" } },
+    { "k": { "es": "Experiencia", "en": "Experience" }, "v": { "es": "Analista de datos en consultoría, 2 años", "en": "Data analyst in consulting, 2 years" } },
+    { "k": { "es": "Base", "en": "Based in" }, "v": { "es": "Bogotá, Colombia", "en": "Bogotá, Colombia" } },
+    { "k": { "es": "Idiomas", "en": "Languages" }, "v": { "es": "Español nativo, inglés B2+, alemán A2, italiano A2", "en": "Spanish (native), English B2+, German A2, Italian A2" } }
+  ],
+  "contacto": {
+    "correo": "johanesteban2003@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/johanegb",
+    "github": "https://github.com/JohanGB",
+    "cv": { "es": "/cv/GarciaJohan_CV_Data.pdf", "en": "/cv/GarciaJohan_CV_Data_EN.pdf" }
+  },
+  "metodo": [
+    {
+      "titulo": { "es": "Fuente con huella", "en": "Fingerprinted source" },
+      "texto": { "es": "Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.", "en": "Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops." },
+      "ejemplo": { "es": "Mercado al Día, Factura Viva", "en": "Mercado al Día, Factura Viva" }
+    },
+    {
+      "titulo": { "es": "Supuestos como datos", "en": "Assumptions as data" },
+      "texto": { "es": "Reglas tributarias, laborales y de categorías viven en archivos versionados con fuente, vigencia y estado de verificación. Nada legal queda escrito a mano en el código.", "en": "Tax, labor and category rules live in versioned files with source, validity and verification status. Nothing legal is hard-coded." },
+      "ejemplo": { "es": "Nómina Clara, Factura Viva", "en": "Nómina Clara, Factura Viva" }
+    },
+    {
+      "titulo": { "es": "Validación fijada antes de mirar", "en": "Validation fixed before looking" },
+      "texto": { "es": "El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.", "en": "The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training." },
+      "ejemplo": { "es": "Mercado al Día, Seguimiento de mirada", "en": "Mercado al Día, Gaze tracker" }
+    },
+    {
+      "titulo": { "es": "Mejor abstenerse que equivocarse", "en": "Better to abstain than to be wrong" },
+      "texto": { "es": "Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.", "en": "Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun." },
+      "ejemplo": { "es": "Los seis proyectos", "en": "All six projects" }
+    }
+  ],
+  "investigacion": [
+    {
+      "titulo": { "es": "Tesis de pregrado: modelo escotogénico para neutrinos y materia oscura", "en": "Undergraduate thesis: scotogenic model for neutrinos and dark matter" },
+      "lugar": { "es": "Universidad de los Andes · 12/2023 – 12/2024", "en": "Universidad de los Andes · 12/2023 – 12/2024" },
+      "puntos": {
+        "es": [
+          "Automaticé en Python un flujo de simulación que conectó tres programas científicos (SARAH, SPheno y micrOMEGAs) y exploró 13 variables del modelo, con 22.000 escenarios válidos.",
+          "Barridos con caminata aleatoria y MCMC para estudiar la densidad reliquia en el escenario de freeze-out y sus correlaciones con los parámetros del modelo.",
+          "Tres candidatos a materia oscura comparados con la densidad observada (Ωh² = 0,1199 ± 0,0012), con límites de detección directa del experimento LZ y de violación de sabor leptónico (MEG: μ → eγ y μ → 3e).",
+          "Resultados comunicados en visualizaciones y un documento técnico, con el código versionado en GitHub."
+        ],
+        "en": [
+          "Automated a Python simulation workflow connecting three scientific packages (SARAH, SPheno and micrOMEGAs) that explored 13 model variables, yielding 22,000 valid scenarios.",
+          "Random-walk and MCMC scans to study the relic density in the freeze-out scenario and its correlations with the model parameters.",
+          "Three dark matter candidates compared with the observed density (Ωh² = 0.1199 ± 0.0012), with direct-detection limits from the LZ experiment and lepton-flavor-violation limits (MEG: μ → eγ and μ → 3e).",
+          "Results communicated through visualizations and a technical report, with version-controlled code on GitHub."
+        ]
+      },
+      "enlace": "https://github.com/JohanGB/Proyect-Scotogenic-Model",
+      "imagen": {
+        "src": "/assets/img/tesis-densidad-reliquia.webp", "ancho": 800, "alto": 600,
+        "alt": { "es": "Densidad reliquia Ωh² frente a la masa de los tres candidatos a materia oscura, entre 100 y 900 GeV, con la banda observada", "en": "Relic density Ωh² versus mass for the three dark matter candidates, between 100 and 900 GeV, with the observed band" },
+        "pie": { "es": "Barrido MCMC: densidad reliquia de los tres candidatos frente a su masa. Gráfica del repositorio de la tesis.", "en": "MCMC scan: relic density of the three candidates versus their mass. Plot from the thesis repository." }
+      }
+    },
+    {
+      "titulo": { "es": "Simulación computacional y análisis de imágenes", "en": "Computational simulation and image analysis" },
+      "lugar": { "es": "Grupo y Laboratorio de Altas Energías, Universidad de los Andes · 08/2023 – 12/2023", "en": "High Energy Physics Group and Laboratory, Universidad de los Andes · 08/2023 – 12/2023" },
+      "puntos": {
+        "es": [
+          "Limpieza y procesamiento de imágenes de rayos X en Python: la técnica propuesta mejoró el contraste frente al método convencional en todos los casos evaluados, hasta 7 veces.",
+          "Simulaciones Monte Carlo de 100.000 eventos en un servidor remoto y una guía técnica para nuevos integrantes del grupo."
+        ],
+        "en": [
+          "Cleaned and processed X-ray images in Python: the proposed technique outperformed the conventional method on contrast in every case tested, by up to 7 times.",
+          "Ran 100,000-event Monte Carlo simulations on a remote server and wrote a technical guide for new group members."
+        ]
+      }
+    }
+  ],
+  "experiencia": [
+    {
+      "cargo": { "es": "Analista de Datos", "en": "Data Analyst" },
+      "lugar": "GABAP S.A.S. · Bogotá",
+      "fechas": { "es": "04/2024 – actualidad", "en": "04/2024 – present" },
+      "puntos": {
+        "es": [
+          "Tableros ejecutivos en Power BI con modelos en estrella para gerencias financieras y operativas, integrando ERP, CRM, extractos bancarios y telemetría GPS.",
+          "Score de riesgo de cartera con regresión logística para cerca de 1.500 clientes B2B y costeo ABC sobre 2,5 millones de líneas de pedido.",
+          "Presupuesto base cero: cerca de 800.000 registros mensuales con cargas incrementales y reglas auditables, y 1.500 inconsistencias resueltas en centros de costo.",
+          "Reportes automatizados con Python y Power Query que redujeron en 40 % el tiempo de los informes semanales."
+        ],
+        "en": [
+          "Executive Power BI dashboards on star-schema models for finance and operations leadership, integrating ERP, CRM, bank statement and GPS telematics data.",
+          "Logistic-regression credit risk score for about 1,500 B2B customers and activity-based costing over 2.5 million order lines.",
+          "Zero-based budgeting: about 800,000 records a month through incremental loads and auditable rules, with 1,500 cost-center inconsistencies resolved.",
+          "Automated reporting with Python and Power Query that cut weekly report preparation time by 40%."
+        ]
+      }
+    },
+    {
+      "cargo": { "es": "Juez académico (International Marker)", "en": "International Olympiad Evaluator" },
+      "lugar": "IPhO 2026 · Bucaramanga",
+      "fechas": { "es": "07/2026", "en": "07/2026" },
+      "puntos": {
+        "es": ["Audité rúbricas, evalué soluciones teóricas y experimentales de delegaciones internacionales y concilié diferencias de puntaje entre evaluadores."],
+        "en": ["Audited marking rubrics, assessed theoretical and experimental solutions from international delegations and reconciled scoring discrepancies between markers."]
+      }
+    },
+    {
+      "cargo": { "es": "Analista de Información Académica", "en": "Academic Data Analyst" },
+      "lugar": "Universidad de los Andes · Bogotá",
+      "fechas": { "es": "01/2022 – 12/2023", "en": "01/2022 – 12/2023" },
+      "puntos": {
+        "es": ["Tableros de seguimiento académico para más de 50 estudiantes de 3 cursos; tutorías y laboratorios de Python, C++ y métodos estadísticos."],
+        "en": ["Academic tracking dashboards for 50+ students across 3 courses; tutoring and lab sessions in Python, C++ and statistical methods."]
+      }
+    }
+  ],
+  "certificaciones": {
+    "es": "Google Data Analytics · IBM Data Analytics · Programa Especializado en Ciencia de Datos y Analítica Financiera (Uniandes) · Proceso Estadístico (DANE)",
+    "en": "Google Data Analytics · IBM Data Analytics · Specialized Program in Data Science and Financial Analytics (Uniandes) · Statistical Process (DANE)"
+  },
+  "herramientas": "Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Excel avanzado · R · Git",
+  "herramientasEn": "Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Advanced Excel · R · Git",
+  "personal": {
+    "es": "Fuera de los datos: fútbol, entrenamiento y cocina. Lo que sigo leyendo por gusto: física de partículas y tecnología nueva.",
+    "en": "Away from data: football, training and cooking. What I keep reading for fun: particle physics and new technology."
+  },
+  "ia": {
+    "es": "Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en docs/uso_de_ia.md.",
+    "en": "I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md."
+  }
+}

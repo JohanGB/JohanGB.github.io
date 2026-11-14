@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyCents · Johan García</title>
+<meta name="description" content="Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.">
+<meta name="author" content="Johan Esteban García Bautista">
+<link rel="canonical" href="https://johangb.github.io/en/projects/mycents.html">
+<link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/mycents.html">
+<link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/mycents.html">
+<link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/mycents.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Johan García">
+<meta property="og:title" content="MyCents · Johan García">
+<meta property="og:description" content="Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.">
+<meta property="og:url" content="https://johangb.github.io/en/projects/mycents.html">
+<meta property="og:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MyCents · Johan García">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MyCents · Johan García">
+<meta name="twitter:description" content="Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.">
+<meta name="twitter:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1218" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibmplexsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fuentes.css">
+<link rel="stylesheet" href="/assets/css/sitio.css">
+<script>try{var t=localStorage.getItem('tema');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Skip to content</a><header class="barra">
+  <div class="contenedor barra__in">
+    <a class="barra__marca" href="/en/">Johan García</a>
+    <nav class="barra__nav" aria-label="Main navigation">
+      <a href="/en/#proyectos">Projects</a><a href="/en/#metodo">How I work</a><a href="/en/#investigacion">Research</a><a href="/en/#experiencia">Experience</a><a href="/en/#contacto">Contact</a>
+    </nav>
+    <div class="controles">
+      <div class="seg" role="group" aria-label="Language"><a href="/proyectos/mycents.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/en/projects/mycents.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+      <button class="icono-btn" type="button" data-tema data-etiqueta-oscuro="Switch to dark theme" data-etiqueta-claro="Switch to light theme" aria-label="Switch to dark theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">MyCents</span></nav>
+    <header class="detalle__cabeza">
+      <p class="etiqueta">Local-first app · <span class="num">195</span> tests passing in CI</p>
+      <h1 class="detalle__titulo">MyCents</h1>
+      <p class="detalle__pregunta">Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</p>
+      <div class="portada__cta" style="margin-bottom:48px">
+        <a class="btn btn--primario" href="https://github.com/JohanGB/App_HomeFinance">Code</a>
+        
+      </div>
+      <div class="detalle__resumen">
+        <div>
+          <p class="etiqueta">Main result</p>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="11 ms: source and method">11<small>ms</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="11 ms"><dl><dt>Source</dt><dd>Synthetic database of 1,000,000 expenses over 10 years (104 MB)</dd><dt>Method</dt><dd>Covering SQLite index vs. 1,133 ms and 364 MB loading everything into pandas</dd></dl><a href="https://github.com/JohanGB/App_HomeFinance">See it in the repository →</a></span></span></div>
+          <p class="tarjeta__grande-etiqueta">monthly view over one million expenses</p>
+        </div>
+        <div>
+          <p class="etiqueta">How it was checked</p>
+          <ul class="chequeos"><li><span><strong>Sync that never merges blindly</strong>Local/remote matrix with explicit conflicts; downloads validated with MD5 and integrity checks before replacing</span></li></ul>
+        </div>
+      </div>
+      <figure class="figura detalle__figura detalle__figura--vertical"><img src="/assets/img/mycents.webp" width="400" height="860" alt="MyCents main screen with budget, daily analysis and transactions" decoding="async"><figcaption>Sample data generated with tools/demo_web.py.</figcaption></figure>
+    </header>
+    <div class="capitulos">
+      <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>Local-first personal finance: each environment is a SQLite file on the device, and Google Drive only receives a copy when switching environments or closing the app. One codebase (Flet) for Windows and Android.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>The user's expenses in SQLite, with money stored as integer cents and converted with Decimal; float is rejected.</li><li>For performance: a synthetic database with 1,000,000 expenses over 10 years (104 MB).</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>MVC architecture: the controller does not import Flet and is tested on its own.</li><li>Analytics with GROUP BY on a covering index, never Pandas.</li><li>Read-only enforced by SQLite (mode=ro, query_only=ON); editing requires a 5-minute session.</li><li>Sync never merges: it compares the local fingerprint with Drive's headRevisionId; if both changed, nothing is overwritten and the user chooses.</li><li>drive.file as the only permission; the token is stored in the OS credential store.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Full monthly view: 11 ms with a covering index vs. 1,133 ms and 364 MB loading everything into pandas (7,386 rows in Python vs. 1,000,000).</li><li>Atomic downloads validated with MD5, integrity_check, foreign_key_check and environment id.</li><li>A test proves new and migrated schemas are identical.</li><li>Windows and sync were tested against real Google Drive. 195 automated tests.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>The .db file is not encrypted yet: the PIN protects the app, not the file.</li><li>Android has not been tested on a physical phone.</li><li>Drive API v3 has no conditional upload, so a narrow last-writer-wins race exists (Drive keeps about 30 days of revisions).</li><li>One open .db per device: no concurrent multi-user merge.</li></ul></div></section>
+    </div>
+    
+    <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
+      <h2 class="etiqueta" id="t-otros">Other projects</h2>
+      <ul class="otros">
+        <li><a href="/en/projects/mercado-al-dia.html"><b>Mercado al Día</b><span>What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</span></a></li>
+        <li><a href="/en/projects/factura-viva.html"><b>Factura Viva</b><span>Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</span></a></li>
+        <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
+        <li><a href="/en/projects/seguimiento-de-mirada.html"><b>Gaze tracker</b><span>Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</span></a></li>
+        <li><a href="/en/projects/huella.html"><b>Huella</b><span>Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</span></a></li>
+      </ul>
+      <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
+    </section>
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md.</p>
+    <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
+  </div>
+</footer>
+<script src="/assets/js/sitio.js" defer></script>
+</body>
+</html>
