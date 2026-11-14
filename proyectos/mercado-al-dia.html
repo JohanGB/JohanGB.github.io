@@ -54,7 +54,7 @@
   <div class="contenedor">
     <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/#proyectos">Proyectos</a> / <span aria-current="page">Mercado al Día</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Pronóstico de precios · <span class="num">51</span> pruebas</p>
+      <p class="etiqueta">Pronóstico de precios · <span class="num">50</span> pruebas en CI</p>
       <h1 class="detalle__titulo">Mercado al Día</h1>
       <p class="detalle__pregunta">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
       <div class="portada__cta" style="margin-bottom:48px">
@@ -78,7 +78,7 @@
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problema</h2><div class="capitulo__texto"><p>Responde qué está barato este mes, en qué meses suele subir cada producto y cuánto costará en 1, 2 y 3 meses, con precios mayoristas de Bogotá y la Sabana y Corabastos como referencia.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Datos</h2><div class="capitulo__texto"><ul><li>Series mensuales de precios mayoristas y abastecimiento del SIPSA (DANE) e índice ONI de El Niño (NOAA CPC).</li><li>Los datos crudos no se redistribuyen: el script los descarga y registra su huella SHA-256. Cada precio cita el archivo, la hoja y la fila de la hoja de cálculo del DANE.</li></ul></div></section>
       <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><ul><li>Perfil estacional con media móvil 2×12 sobre logaritmos de precio.</li><li>LightGBM a 1 mes e ingenuo calibrado a 2 y 3 meses, con rangos del 80 % por calibración conformal (CQR).</li><li>SARIMAX con el índice ONI no mejoró de forma significativa al ingenuo; N-BEATS perdió en todos los horizontes.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).</li><li>Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.</li><li>El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.</li><li>51 pruebas automáticas que corren sin internet.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).</li><li>Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.</li><li>El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.</li><li>51 pruebas automáticas que corren sin internet; en la CI pasan 50 y 1 se omite.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>El SIPSA mide el precio de venta mayorista en la central de abastos, con IVA, en pesos de cada mes. En una tienda el precio es mayor (transporte, mermas, margen). Sirve para anticipar subidas, bajadas y temporadas, no para saber cuánto pagará en la tienda.</li><li>No es asesoría financiera.</li></ul></div></section>
     </div>
     <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md">Uso de IA documentado en este proyecto →</a></p>
@@ -89,6 +89,7 @@
         <li><a href="/proyectos/nomina-clara.html"><b>Nómina Clara</b><span>¿Cuánto cuesta de verdad un turno, una hora extra o una liquidación, ahora que la Ley 2466 cambia las reglas por fechas?</span></a></li>
         <li><a href="/proyectos/mycents.html"><b>MyCents</b><span>Finanzas personales que viven en tu equipo y se respaldan en Google Drive sin pisar nunca tus datos.</span></a></li>
         <li><a href="/proyectos/seguimiento-de-mirada.html"><b>Seguimiento de mirada</b><span>¿Hacia dónde miras en la pantalla, usando solo la webcam y sin que ningún fotograma salga del equipo?</span></a></li>
+        <li><a href="/proyectos/huella.html"><b>Huella</b><span>¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?</span></a></li>
       </ul>
       <p class="enlaces" style="margin-top:24px"><a href="/#proyectos">← Todos los proyectos</a></p>
     </section>

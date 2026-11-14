@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huella · Johan García</title>
+<meta name="description" content="Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?">
+<meta name="author" content="Johan Esteban García Bautista">
+<link rel="canonical" href="https://johangb.github.io/en/projects/huella.html">
+<link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/huella.html">
+<link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/huella.html">
+<link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/huella.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Johan García">
+<meta property="og:title" content="Huella · Johan García">
+<meta property="og:description" content="Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?">
+<meta property="og:url" content="https://johangb.github.io/en/projects/huella.html">
+<meta property="og:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Huella · Johan García">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Huella · Johan García">
+<meta name="twitter:description" content="Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?">
+<meta name="twitter:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1218" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibmplexsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fuentes.css">
+<link rel="stylesheet" href="/assets/css/sitio.css">
+<script>try{var t=localStorage.getItem('tema');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Skip to content</a><header class="barra">
+  <div class="contenedor barra__in">
+    <a class="barra__marca" href="/en/">Johan García</a>
+    <nav class="barra__nav" aria-label="Main navigation">
+      <a href="/en/#proyectos">Projects</a><a href="/en/#metodo">How I work</a><a href="/en/#investigacion">Research</a><a href="/en/#experiencia">Experience</a><a href="/en/#contacto">Contact</a>
+    </nav>
+    <div class="controles">
+      <div class="seg" role="group" aria-label="Language"><a href="/proyectos/huella.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/en/projects/huella.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+      <button class="icono-btn" type="button" data-tema data-etiqueta-oscuro="Switch to dark theme" data-etiqueta-claro="Switch to light theme" aria-label="Switch to dark theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Huella</span></nav>
+    <header class="detalle__cabeza">
+      <p class="etiqueta">Resource monitoring · <span class="num">116</span> tests passing in CI</p>
+      <h1 class="detalle__titulo">Huella</h1>
+      <p class="detalle__pregunta">Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</p>
+      <div class="portada__cta" style="margin-bottom:48px">
+        <a class="btn btn--primario" href="https://github.com/JohanGB/huella">Code</a>
+        
+      </div>
+      <div class="detalle__resumen">
+        <div>
+          <p class="etiqueta">Main result</p>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="0 ms: source and method">0<small>ms</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="0 ms"><dl><dt>Source</dt><dd>Daemon measurement on a 2-vCPU Linux VM (Python 3.13, psutil 7.2)</dd><dt>Method</dt><dd>Process observed from outside with tools/bench.py: CPU, context switches and bytes written</dd></dl><a href="https://github.com/JohanGB/huella">See it in the repository →</a></span></span></div>
+          <p class="tarjeta__grande-etiqueta">of CPU over 5 minutes of Gaming mode</p>
+        </div>
+        <div>
+          <p class="etiqueta">How it was checked</p>
+          <ul class="chequeos"><li><span><strong>Leaks detected in 99.4–100 % of cases</strong>5,000 synthetic 30-minute series; 0 % alerts on stable series</span></li></ul>
+        </div>
+      </div>
+      <figure class="figura detalle__figura"><img src="/assets/img/huella.webp" width="980" height="620" alt="Huella monthly dashboard with CPU, RAM and disk per application" decoding="async"><figcaption>Monthly dashboard with demo data.</figcaption></figure>
+    </header>
+    <div class="capitulos">
+      <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>A passive, read-only profiler for Windows and Linux. It lives in the system tray, records use per application and detects memory leaks and processes with sustained CPU. Its principle: do not spend the resources it is trying to measure.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>psutil readings every 10–15 s: CPU-time deltas, private memory and I/O per process, keyed by (pid, creation time) so reused PIDs are never mixed.</li><li>Aggregates per day and application are stored, not samples: the month is a GROUP BY.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>One clock: only the collector thread has a timer; analyzer and writer wait on a queue without a timeout. That is why Gaming mode reaches zero.</li><li>A leak is three conditions on the per-minute minimum over 30 minutes: growth of at least 64 MB and 10 %, Kendall tau ≥ 0.70, and a Theil-Sen slope over the last third of at least 33 % of the total, which separates a leak from a cache that fills up.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Gaming mode, 5 minutes: 0 ms CPU, 0 context switches and 0 KB written (daemon). Active: 0.04 % CPU and 22.6 MB RSS.</li><li>Disk: the real daemon wrote about 5.8 MB a day; in simulation, aggregates request 151 times less than one row per process and tick.</li><li>&quot;Read-only&quot; is tested: a test walks the code and fails if kill, terminate, subprocess, socket and similar appear.</li><li>117 automated tests; 116 pass in GitHub CI and one is pending review.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>Figures are from Linux; on Windows it was only tested with test doubles, not on a real machine.</li><li>Zero CPU, not zero RAM: in Gaming mode the process stays in memory.</li><li>Leak thresholds were calibrated on synthetic series; a random walk triggers alerts in 2.3–6.1 % of cases.</li></ul></div></section>
+    </div>
+    
+    <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
+      <h2 class="etiqueta" id="t-otros">Other projects</h2>
+      <ul class="otros">
+        <li><a href="/en/projects/mercado-al-dia.html"><b>Mercado al Día</b><span>What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</span></a></li>
+        <li><a href="/en/projects/factura-viva.html"><b>Factura Viva</b><span>Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</span></a></li>
+        <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
+        <li><a href="/en/projects/mycents.html"><b>MyCents</b><span>Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</span></a></li>
+        <li><a href="/en/projects/seguimiento-de-mirada.html"><b>Gaze tracker</b><span>Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</span></a></li>
+      </ul>
+      <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
+    </section>
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md.</p>
+    <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
+  </div>
+</footer>
+<script src="/assets/js/sitio.js" defer></script>
+</body>
+</html>

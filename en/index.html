@@ -57,7 +57,7 @@
       <h1 class="portada__nombre" id="nombre">Johan Esteban García Bautista</h1>
       <p class="portada__promesa">Data tools that show where every number comes from. <em>And how it was checked.</em></p>
       <p class="portada__rol">Physicist and data analyst. Looking for actuarial and data roles in insurance and banking.</p>
-      <p class="portada__cuerpo">Five personal projects built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun.</p>
+      <p class="portada__cuerpo">Six personal projects built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun.</p>
       <div class="portada__cta">
         <a class="btn btn--primario" href="/cv/GarciaJohan_CV_Data_EN.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" stroke-linecap="round" stroke-linejoin="round"/></svg>Download CV</a>
         <a class="btn" href="mailto:johanesteban2003@gmail.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5 8 9l5.5-4.5" stroke-linejoin="round"/></svg>Email me</a>
@@ -90,7 +90,7 @@
       <div class="proyectos">
 <article class="tarjeta" id="mercado-al-dia">
   <div>
-    <p class="etiqueta">Price forecasting · <span class="num">51</span> tests</p>
+    <p class="etiqueta">Price forecasting · <span class="num">50</span> tests passing in CI</p>
     <h3><a href="/en/projects/mercado-al-dia.html">Mercado al Día</a></h3>
     <p class="tarjeta__pregunta">What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</p>
     <ol class="flujo" aria-label="Data flow"><li><span>SIPSA and ONI</span></li><li><span>SHA-256 fingerprint</span></li><li><span>Clean panel</span></li><li><span>Rolling origin</span></li><li><span>Published page</span></li></ol>
@@ -103,12 +103,12 @@
       <p class="tarjeta__grande-etiqueta">typical error of the 1-month forecast</p>
     </div>
     <ul class="chequeos"><li><span><strong>80 % intervals that covered 82.6–83.3 %</strong>Conformal calibration (CQR) per horizon</span></li><li><span><strong>N-BEATS (deep learning) was not deployed</strong>Lost to the naive model on every horizon; the rule requires a win with a 90 % bootstrap CI</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">51</b> tests</span><span>Data: SIPSA (DANE), NOAA</span></p>
+    <p class="tarjeta__pie"><span><b class="num">50</b> tests passing in CI</span><span>Data: SIPSA (DANE), NOAA</span></p>
   </div>
 </article>
 <article class="tarjeta" id="factura-viva">
   <div>
-    <p class="etiqueta">Personal finance and tax · <span class="num">93</span> tests</p>
+    <p class="etiqueta">Personal finance and tax · <span class="num">93</span> tests passing in CI</p>
     <h3><a href="/en/projects/factura-viva.html">Factura Viva</a></h3>
     <p class="tarjeta__pregunta">Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</p>
     <ol class="flujo" aria-label="Data flow"><li><span>Email ZIP</span></li><li><span>UBL 2.1 XML</span></li><li><span>9 checks</span></li><li><span>Balance check</span></li><li><span>Dashboard</span></li></ol>
@@ -121,12 +121,12 @@
       <p class="tarjeta__grande-etiqueta">per DIAN invoice parsed straight from the email ZIP</p>
     </div>
     <ul class="chequeos"><li><span><strong>Statements from 5 bank products</strong>Opening balance plus movements must equal closing balance; otherwise it goes to review instead of guessing</span></li><li><span><strong>1 % income tax deduction (art. 336-5)</strong>Tax rules as data with source and validity; each row points to its file and SHA-256 fingerprint</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">93</b> tests</span><span>Personal data never leaves the device</span></p>
+    <p class="tarjeta__pie"><span><b class="num">93</b> tests passing in CI</span><span>Personal data never leaves the device</span></p>
   </div>
 </article>
 <article class="tarjeta" id="nomina-clara">
   <div>
-    <p class="etiqueta">Labor compliance · <span class="num">72</span> tests</p>
+    <p class="etiqueta">Labor compliance · <span class="num">72</span> tests passing in CI</p>
     <h3><a href="/en/projects/nomina-clara.html">Nómina Clara</a></h3>
     <p class="tarjeta__pregunta">What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</p>
     <ol class="flujo" aria-label="Data flow"><li><span>Official norm</span></li><li><span>Rule in YAML</span></li><li><span>Rule in force by date</span></li><li><span>Minute by minute</span></li><li><span>Result with citation</span></li></ol>
@@ -139,12 +139,12 @@
       <p class="tarjeta__grande-etiqueta">with norm, article, official URL and literal quote</p>
     </div>
     <ul class="chequeos"><li><span><strong>Surcharges computed minute by minute with the rule in force that day</strong>36 rules with norm, article, official URL, consultation date and literal quote</span></li><li><span><strong>Full settlement: severance, interest, bonus, vacation and indemnity</strong>The loader rejects any rule marked verified without a primary source</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">72</b> tests</span><span>Not legal advice</span></p>
+    <p class="tarjeta__pie"><span><b class="num">72</b> tests passing in CI</span><span>Not legal advice</span></p>
   </div>
 </article>
 <article class="tarjeta" id="mycents">
   <div>
-    <p class="etiqueta">Local-first app · <span class="num">195</span> tests</p>
+    <p class="etiqueta">Local-first app · <span class="num">195</span> tests passing in CI</p>
     <h3><a href="/en/projects/mycents.html">MyCents</a></h3>
     <p class="tarjeta__pregunta">Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</p>
     <ol class="flujo" aria-label="Data flow"><li><span>Local SQLite</span></li><li><span>Integer cents</span></li><li><span>Covering index</span></li><li><span>Sync matrix</span></li><li><span>Drive</span></li></ol>
@@ -157,12 +157,12 @@
       <p class="tarjeta__grande-etiqueta">monthly view over one million expenses</p>
     </div>
     <ul class="chequeos"><li><span><strong>Sync that never merges blindly</strong>Local/remote matrix with explicit conflicts; downloads validated with MD5 and integrity checks before replacing</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">195</b> tests</span><span>Windows and Android</span></p>
+    <p class="tarjeta__pie"><span><b class="num">195</b> tests passing in CI</span><span>Windows and Android</span></p>
   </div>
 </article>
 <article class="tarjeta" id="seguimiento-de-mirada">
   <div>
-    <p class="etiqueta">Computer vision · <span class="num">86</span> tests</p>
+    <p class="etiqueta">Computer vision · <span class="num">85</span> tests passing in CI</p>
     <h3><a href="/en/projects/seguimiento-de-mirada.html">Gaze tracker</a></h3>
     <p class="tarjeta__pregunta">Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</p>
     <ol class="flujo" aria-label="Data flow"><li><span>Webcam</span></li><li><span>Face landmarks</span></li><li><span>3D ray</span></li><li><span>Ridge + corrector</span></li><li><span>Heatmap</span></li></ol>
@@ -175,7 +175,25 @@
       <p class="tarjeta__grande-etiqueta">error with the head turned 20° (was 532 px)</p>
     </div>
     <ul class="chequeos"><li><span><strong>Honest validation</strong>Fixed points never enter training; accuracy and jitter are reported separately</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">86</b> tests</span><span>100 % local, CPU only</span></p>
+    <p class="tarjeta__pie"><span><b class="num">85</b> tests passing in CI</span><span>100 % local, CPU only</span></p>
+  </div>
+</article>
+<article class="tarjeta" id="huella">
+  <div>
+    <p class="etiqueta">Resource monitoring · <span class="num">116</span> tests passing in CI</p>
+    <h3><a href="/en/projects/huella.html">Huella</a></h3>
+    <p class="tarjeta__pregunta">Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</p>
+    <ol class="flujo" aria-label="Data flow"><li><span>psutil</span></li><li><span>Collector</span></li><li><span>Detectors</span></li><li><span>Batch every 5 min</span></li><li><span>SQLite</span></li></ol>
+    <ul class="pila" aria-label="Stack"><li>Python</li><li>psutil</li><li>SQLite</li><li>PyQt6</li></ul>
+    <div class="enlaces"><a href="/en/projects/huella.html">How it was built →</a><a href="https://github.com/JohanGB/huella">Code</a></div>
+  </div>
+  <div class="tarjeta__lado">
+    <div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-9" aria-label="0 ms: source and method">0<small>ms</small></button><span class="ficha-traza" id="traza-9" role="group" aria-label="0 ms"><dl><dt>Source</dt><dd>Daemon measurement on a 2-vCPU Linux VM (Python 3.13, psutil 7.2)</dd><dt>Method</dt><dd>Process observed from outside with tools/bench.py: CPU, context switches and bytes written</dd></dl><a href="https://github.com/JohanGB/huella">See it in the repository →</a></span></span></div>
+      <p class="tarjeta__grande-etiqueta">of CPU over 5 minutes of Gaming mode</p>
+    </div>
+    <ul class="chequeos"><li><span><strong>Leaks detected in 99.4–100 % of cases</strong>5,000 synthetic 30-minute series; 0 % alerts on stable series</span></li></ul>
+    <p class="tarjeta__pie"><span><b class="num">116</b> tests passing in CI</span><span>Read-only, no network</span></p>
   </div>
 </article>
       </div>
@@ -189,7 +207,7 @@
         <li class="paso"><h3>Fingerprinted source</h3><p>Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops.</p><small>Where to see it: Mercado al Día, Factura Viva</small></li>
         <li class="paso"><h3>Assumptions as data</h3><p>Tax, labor and category rules live in versioned files with source, validity and verification status. Nothing legal is hard-coded.</p><small>Where to see it: Nómina Clara, Factura Viva</small></li>
         <li class="paso"><h3>Validation fixed before looking</h3><p>The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training.</p><small>Where to see it: Mercado al Día, Gaze tracker</small></li>
-        <li class="paso"><h3>Better to abstain than to be wrong</h3><p>Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun.</p><small>Where to see it: All five projects</small></li>
+        <li class="paso"><h3>Better to abstain than to be wrong</h3><p>Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun.</p><small>Where to see it: All six projects</small></li>
       </ol>
     </div>
   </section>

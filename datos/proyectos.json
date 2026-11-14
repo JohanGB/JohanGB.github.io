@@ -33,7 +33,7 @@
           }
         }
       ],
-      "pruebas": 51,
+      "pruebas": 50,
       "pila": ["Python", "pandas", "LightGBM", "statsmodels", "JAX"],
       "nota": { "es": "Datos: SIPSA (DANE), NOAA", "en": "Data: SIPSA (DANE), NOAA" },
       "enlaces": { "codigo": "https://github.com/JohanGB/NowMarket", "demo": "/demo/mercado.html" },
@@ -60,8 +60,8 @@
           "en": ["Seasonal profile with a 2×12 moving average on log prices.", "LightGBM at 1 month and calibrated naive at 2 and 3 months, with 80 % intervals from conformal calibration (CQR).", "SARIMAX with the ONI index gave no significant gain over naive; N-BEATS lost on every horizon."]
         },
         "validacion": {
-          "es": ["Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).", "Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.", "El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.", "51 pruebas automáticas que corren sin internet."],
-          "en": ["Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % bootstrap CI, and a single test (2023-11 to 2026-09).", "Single-test results: 1 month, LightGBM, typical error 9.2 % and coverage 83.3 %; 2 months, calibrated naive, 16.0 % and 83.0 %; 3 months, 20.2 % and 82.6 %.", "The \"usually goes up/down\" advice is right 78.2 % of the time vs. a 73.7 % baseline.", "51 automated tests that run offline."]
+          "es": ["Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).", "Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.", "El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.", "51 pruebas automáticas que corren sin internet; en la CI pasan 50 y 1 se omite."],
+          "en": ["Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % bootstrap CI, and a single test (2023-11 to 2026-09).", "Single-test results: 1 month, LightGBM, typical error 9.2 % and coverage 83.3 %; 2 months, calibrated naive, 16.0 % and 83.0 %; 3 months, 20.2 % and 82.6 %.", "The \"usually goes up/down\" advice is right 78.2 % of the time vs. a 73.7 % baseline.", "51 automated tests that run offline; in CI, 50 pass and 1 is skipped."]
         },
         "limitaciones": {
           "es": ["El SIPSA mide el precio de venta mayorista en la central de abastos, con IVA, en pesos de cada mes. En una tienda el precio es mayor (transporte, mermas, margen). Sirve para anticipar subidas, bajadas y temporadas, no para saber cuánto pagará en la tienda.", "No es asesoría financiera."],
@@ -118,8 +118,8 @@
           "en": ["Rule-based categories in YAML, recording which rule decided.", "Real outflow: statement outflows minus transfers between my own products.", "Deduction: 1 % of e-invoiced purchases, capped at 240 UVT (art. 336-5, Tax Code).", "Price alerts: same product and issuer, current price vs. previous median."]
         },
         "validacion": {
-          "es": ["9 chequeos por factura: líneas más impuestos igual al total, CUFE y validación DIAN.", "Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a una cola de revisión.", "Datos crudos inmutables: si un archivo crudo cambia, el flujo se detiene. Cada fila guarda archivo de origen, SHA-256, línea o fila y versión del código.", "93 pruebas automáticas."],
-          "en": ["9 checks per invoice: lines plus taxes equal total, CUFE and DIAN validation.", "Opening balance plus movements must equal closing balance; otherwise it goes to a review queue.", "Immutable raw data: if a raw file changes, the pipeline stops. Each row keeps source file, SHA-256, line or row and code version.", "93 automated tests."]
+          "es": ["9 chequeos por factura: líneas más impuestos igual al total, CUFE y validación DIAN.", "Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a una cola de revisión.", "Datos crudos inmutables: si un archivo crudo cambia, el flujo se detiene. Cada fila guarda archivo de origen, SHA-256, línea o fila y versión del código.", "95 pruebas automáticas; en la CI pasan 93 y 2 se omiten."],
+          "en": ["9 checks per invoice: lines plus taxes equal total, CUFE and DIAN validation.", "Opening balance plus movements must equal closing balance; otherwise it goes to a review queue.", "Immutable raw data: if a raw file changes, the pipeline stops. Each row keeps source file, SHA-256, line or row and code version.", "95 automated tests; in CI, 93 pass and 2 are skipped."]
         },
         "limitaciones": {
           "es": ["Versión 0.2, fase 1: un MVP útil sin aprendizaje automático. Faltan 20 a 50 facturas etiquetadas para medir F1 por categoría y entrenar un modelo frente a la línea base de reglas.", "Las alertas de precio necesitan dos compras del mismo producto en fechas distintas.", "No es asesoría tributaria ni financiera."],
@@ -267,7 +267,7 @@
           "como": { "es": "Los puntos fijos nunca entran al entrenamiento; exactitud y temblor se reportan por separado", "en": "Fixed points never enter training; accuracy and jitter are reported separately" }
         }
       ],
-      "pruebas": 86,
+      "pruebas": 85,
       "pila": ["Python", "MediaPipe", "OpenCV", "scikit-learn", "PyQt6"],
       "nota": { "es": "100 % local, solo CPU", "en": "100 % local, CPU only" },
       "enlaces": { "codigo": "https://github.com/JohanGB/visual-follower" },
@@ -294,12 +294,70 @@
           "en": ["Face and iris landmarks with MediaPipe; head pose with solvePnP; the camera–iris ray is intersected with the eyeball to get a 3D gaze vector.", "Ridge with an RBF-kernel corrector on the residual, and a One Euro filter for smoothing.", "Why Ridge, not SVR: an RBF-SVR regresses to the mean outside the training data; with the real gaze at 1.25 screen widths, Ridge flagged \"off-screen\" 100 % of the time, SVR 0 %."]
         },
         "validacion": {
-          "es": ["Los puntos fijos nunca se usan para entrenar: miden el error real. Exactitud (sesgo) y precisión (temblor) se reportan por separado.", "Mediana del error en simulación (1920×1080): pose de calibración, 49 px con el método clásico y 45 px con geometría 3D; cabeza girada 20°, 532 px y 87 px; movimiento combinado, 593 px y 167 px.", "La calibración personal bajó el error con la cabeza en movimiento de 100–245 px a 17–37 px. CPU: cerca del 25 % de un núcleo a 15 FPS.", "86 pruebas automáticas; la interfaz se prueba con hilos reales y Qt sin pantalla."],
-          "en": ["Fixed points are never used for training: they measure the real error. Accuracy (bias) and precision (jitter) are reported separately.", "Median error in simulation (1920×1080): calibration pose, 49 px classic vs. 45 px 3D geometry; 20° head yaw, 532 px vs. 87 px; combined movement, 593 px vs. 167 px.", "Personal calibration cut moved-head error from 100–245 px to 17–37 px. CPU: about 25 % of one core at 15 FPS.", "86 automated tests; the UI is tested with real threads and headless Qt."]
+          "es": ["Los puntos fijos nunca se usan para entrenar: miden el error real. Exactitud (sesgo) y precisión (temblor) se reportan por separado.", "Mediana del error en simulación (1920×1080): pose de calibración, 49 px con el método clásico y 45 px con geometría 3D; cabeza girada 20°, 532 px y 87 px; movimiento combinado, 593 px y 167 px.", "La calibración personal bajó el error con la cabeza en movimiento de 100–245 px a 17–37 px. CPU: cerca del 25 % de un núcleo a 15 FPS.", "87 pruebas automáticas (en la CI pasan 85; 2 se omiten sin el modelo de MediaPipe descargado); la interfaz se prueba con hilos reales y Qt sin pantalla."],
+          "en": ["Fixed points are never used for training: they measure the real error. Accuracy (bias) and precision (jitter) are reported separately.", "Median error in simulation (1920×1080): calibration pose, 49 px classic vs. 45 px 3D geometry; 20° head yaw, 532 px vs. 87 px; combined movement, 593 px vs. 167 px.", "Personal calibration cut moved-head error from 100–245 px to 17–37 px. CPU: about 25 % of one core at 15 FPS.", "87 automated tests (85 pass in CI; 2 are skipped without the downloaded MediaPipe model); the UI is tested with real threads and headless Qt."]
         },
         "limitaciones": {
           "es": ["Todavía no se ha validado con varios usuarios reales; los primeros datos reales mostraron un seguimiento horizontal muy bueno (R² 0,97–0,98) pero un seguimiento vertical débil.", "La resolución de 640×480 limita la precisión a zonas de la pantalla, no a palabras.", "Las poses extremas duplican aproximadamente el error. Un solo monitor."],
           "en": ["Not yet validated with multiple real users; first real data showed excellent horizontal tracking (R² 0.97–0.98) but weak vertical tracking.", "640×480 resolution limits precision to screen zones, not words.", "Extreme poses roughly double the error. Single monitor."]
+        }
+      }
+    },
+    {
+      "slug": "huella",
+      "nombre": { "es": "Huella", "en": "Huella" },
+      "tipo": { "es": "Monitoreo de recursos", "en": "Resource monitoring" },
+      "pregunta": {
+        "es": "¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?",
+        "en": "Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?"
+      },
+      "metrica": {
+        "valor": { "es": "0", "en": "0" },
+        "unidad": "ms",
+        "etiqueta": { "es": "de CPU en 5 minutos de modo Gaming", "en": "of CPU over 5 minutes of Gaming mode" },
+        "fuente": { "es": "Medición del demonio en una VM Linux de 2 vCPU (Python 3.13, psutil 7.2)", "en": "Daemon measurement on a 2-vCPU Linux VM (Python 3.13, psutil 7.2)" },
+        "metodo": { "es": "Proceso observado desde afuera con tools/bench.py: CPU, cambios de contexto y bytes escritos", "en": "Process observed from outside with tools/bench.py: CPU, context switches and bytes written" },
+        "destacada": false
+      },
+      "comprobaciones": [
+        {
+          "resultado": { "es": "Fugas detectadas en el 99,4–100 % de los casos", "en": "Leaks detected in 99.4–100 % of cases" },
+          "como": { "es": "5.000 series sintéticas de 30 minutos; 0 % de alertas en series estables", "en": "5,000 synthetic 30-minute series; 0 % alerts on stable series" }
+        }
+      ],
+      "pruebas": 116,
+      "pila": ["Python", "psutil", "SQLite", "PyQt6"],
+      "nota": { "es": "Solo lectura, sin red", "en": "Read-only, no network" },
+      "enlaces": { "codigo": "https://github.com/JohanGB/huella" },
+      "flujo": {
+        "es": ["psutil", "Recolector", "Detectores", "Lote cada 5 min", "SQLite"],
+        "en": ["psutil", "Collector", "Detectors", "Batch every 5 min", "SQLite"]
+      },
+      "imagen": {
+        "src": "/assets/img/huella.webp", "ancho": 980, "alto": 620,
+        "alt": { "es": "Panel mensual de Huella con CPU, RAM y disco por aplicación", "en": "Huella monthly dashboard with CPU, RAM and disk per application" },
+        "pie": { "es": "Panel mensual con datos de demostración.", "en": "Monthly dashboard with demo data." }
+      },
+      "detalle": {
+        "problema": {
+          "es": ["Profiler pasivo de solo lectura para Windows y Linux. Vive en la bandeja del sistema, registra el consumo por aplicación y detecta fugas de memoria y procesos con CPU sostenida. Su principio: no gastar los recursos que intenta medir."],
+          "en": ["A passive, read-only profiler for Windows and Linux. It lives in the system tray, records use per application and detects memory leaks and processes with sustained CPU. Its principle: do not spend the resources it is trying to measure."]
+        },
+        "datos": {
+          "es": ["Lecturas de psutil cada 10–15 s: deltas de tiempo de CPU, memoria privada y E/S por proceso, con la clave (pid, hora de creación) para no mezclar procesos que reutilizan un PID.", "Se guardan agregados por día y aplicación, no muestras: el mes sale de un GROUP BY."],
+          "en": ["psutil readings every 10–15 s: CPU-time deltas, private memory and I/O per process, keyed by (pid, creation time) so reused PIDs are never mixed.", "Aggregates per day and application are stored, not samples: the month is a GROUP BY."]
+        },
+        "metodo": {
+          "es": ["Un solo reloj: solo el hilo recolector tiene temporizador; analizador y escritor esperan en una cola sin timeout. Por eso el modo Gaming llega a cero.", "Una fuga son tres condiciones sobre el mínimo de cada minuto durante 30 minutos: crecimiento de al menos 64 MB y 10 %, tau de Kendall ≥ 0,70 y una pendiente de Theil-Sen del último tercio de al menos 33 % de la total, que separa una fuga de una caché que se llena."],
+          "en": ["One clock: only the collector thread has a timer; analyzer and writer wait on a queue without a timeout. That is why Gaming mode reaches zero.", "A leak is three conditions on the per-minute minimum over 30 minutes: growth of at least 64 MB and 10 %, Kendall tau ≥ 0.70, and a Theil-Sen slope over the last third of at least 33 % of the total, which separates a leak from a cache that fills up."]
+        },
+        "validacion": {
+          "es": ["Modo Gaming, 5 minutos: 0 ms de CPU, 0 cambios de contexto y 0 KB escritos (demonio). Activo: 0,04 % de CPU y 22,6 MB de RSS.", "Disco: el demonio real escribió unos 5,8 MB al día; en la simulación, los agregados piden 151 veces menos que una fila por proceso y tick.", "«Solo lectura» se comprueba: una prueba recorre el código y falla si aparece kill, terminate, subprocess, socket y similares.", "117 pruebas automáticas; en la CI de GitHub pasan 116 y una queda pendiente de revisar."],
+          "en": ["Gaming mode, 5 minutes: 0 ms CPU, 0 context switches and 0 KB written (daemon). Active: 0.04 % CPU and 22.6 MB RSS.", "Disk: the real daemon wrote about 5.8 MB a day; in simulation, aggregates request 151 times less than one row per process and tick.", "\"Read-only\" is tested: a test walks the code and fails if kill, terminate, subprocess, socket and similar appear.", "117 automated tests; 116 pass in GitHub CI and one is pending review."]
+        },
+        "limitaciones": {
+          "es": ["Las cifras son de Linux; en Windows solo se probó con dobles de prueba, no en un equipo real.", "Cero de CPU, no de RAM: en modo Gaming el proceso sigue en memoria.", "Los umbrales de fugas se calibraron con series sintéticas; un paseo aleatorio dispara alertas en el 2,3–6,1 % de los casos."],
+          "en": ["Figures are from Linux; on Windows it was only tested with test doubles, not on a real machine.", "Zero CPU, not zero RAM: in Gaming mode the process stays in memory.", "Leak thresholds were calibrated on synthetic series; a random walk triggers alerts in 2.3–6.1 % of cases."]
         }
       }
     }

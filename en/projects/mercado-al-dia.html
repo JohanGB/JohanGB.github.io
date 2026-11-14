@@ -54,7 +54,7 @@
   <div class="contenedor">
     <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Mercado al Día</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Price forecasting · <span class="num">51</span> tests</p>
+      <p class="etiqueta">Price forecasting · <span class="num">50</span> tests passing in CI</p>
       <h1 class="detalle__titulo">Mercado al Día</h1>
       <p class="detalle__pregunta">What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</p>
       <div class="portada__cta" style="margin-bottom:48px">
@@ -78,7 +78,7 @@
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>It answers what is cheap this month, in which months each product usually rises and what it will cost in 1, 2 and 3 months, using wholesale prices for Bogotá and the Savannah with Corabastos as reference.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>DANE SIPSA monthly wholesale price and supply series and NOAA CPC's ONI (El Niño) index.</li><li>Raw data is not redistributed: the script downloads it and records its SHA-256 fingerprint. Each price cites the file, sheet and row of the DANE spreadsheet.</li></ul></div></section>
       <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>Seasonal profile with a 2×12 moving average on log prices.</li><li>LightGBM at 1 month and calibrated naive at 2 and 3 months, with 80 % intervals from conformal calibration (CQR).</li><li>SARIMAX with the ONI index gave no significant gain over naive; N-BEATS lost on every horizon.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % bootstrap CI, and a single test (2023-11 to 2026-09).</li><li>Single-test results: 1 month, LightGBM, typical error 9.2 % and coverage 83.3 %; 2 months, calibrated naive, 16.0 % and 83.0 %; 3 months, 20.2 % and 82.6 %.</li><li>The &quot;usually goes up/down&quot; advice is right 78.2 % of the time vs. a 73.7 % baseline.</li><li>51 automated tests that run offline.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % bootstrap CI, and a single test (2023-11 to 2026-09).</li><li>Single-test results: 1 month, LightGBM, typical error 9.2 % and coverage 83.3 %; 2 months, calibrated naive, 16.0 % and 83.0 %; 3 months, 20.2 % and 82.6 %.</li><li>The &quot;usually goes up/down&quot; advice is right 78.2 % of the time vs. a 73.7 % baseline.</li><li>51 automated tests that run offline; in CI, 50 pass and 1 is skipped.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>SIPSA measures wholesale prices at the central market. Retail prices are higher; the tool anticipates rises, drops and seasons, not the exact shop price.</li><li>Not financial advice.</li></ul></div></section>
     </div>
     <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md">AI usage documented in this project →</a></p>
@@ -89,6 +89,7 @@
         <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
         <li><a href="/en/projects/mycents.html"><b>MyCents</b><span>Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</span></a></li>
         <li><a href="/en/projects/seguimiento-de-mirada.html"><b>Gaze tracker</b><span>Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</span></a></li>
+        <li><a href="/en/projects/huella.html"><b>Huella</b><span>Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</span></a></li>
       </ul>
       <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
     </section>

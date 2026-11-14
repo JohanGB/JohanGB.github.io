@@ -57,7 +57,7 @@
       <h1 class="portada__nombre" id="nombre">Johan Esteban García Bautista</h1>
       <p class="portada__promesa">Herramientas de datos que muestran de dónde sale cada cifra. <em>Y cómo se comprobó.</em></p>
       <p class="portada__rol">Físico y analista de datos. Busco roles actuariales y de datos en seguros y banca.</p>
-      <p class="portada__cuerpo">Cinco proyectos propios con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir.</p>
+      <p class="portada__cuerpo">Seis proyectos propios con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir.</p>
       <div class="portada__cta">
         <a class="btn btn--primario" href="/cv/GarciaJohan_CV_Data.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" stroke-linecap="round" stroke-linejoin="round"/></svg>Descargar CV</a>
         <a class="btn" href="mailto:johanesteban2003@gmail.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5 8 9l5.5-4.5" stroke-linejoin="round"/></svg>Escribirme</a>
@@ -90,7 +90,7 @@
       <div class="proyectos">
 <article class="tarjeta" id="mercado-al-dia">
   <div>
-    <p class="etiqueta">Pronóstico de precios · <span class="num">51</span> pruebas</p>
+    <p class="etiqueta">Pronóstico de precios · <span class="num">50</span> pruebas en CI</p>
     <h3><a href="/proyectos/mercado-al-dia.html">Mercado al Día</a></h3>
     <p class="tarjeta__pregunta">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>SIPSA y ONI</span></li><li><span>Huella SHA-256</span></li><li><span>Panel limpio</span></li><li><span>Origen rodante</span></li><li><span>Página publicada</span></li></ol>
@@ -103,12 +103,12 @@
       <p class="tarjeta__grande-etiqueta">error típico del pronóstico a 1 mes</p>
     </div>
     <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 82,6–83,3 %</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">51</b> pruebas</span><span>Datos: SIPSA (DANE), NOAA</span></p>
+    <p class="tarjeta__pie"><span><b class="num">50</b> pruebas en CI</span><span>Datos: SIPSA (DANE), NOAA</span></p>
   </div>
 </article>
 <article class="tarjeta" id="factura-viva">
   <div>
-    <p class="etiqueta">Finanzas personales y tributación · <span class="num">93</span> pruebas</p>
+    <p class="etiqueta">Finanzas personales y tributación · <span class="num">93</span> pruebas en CI</p>
     <h3><a href="/proyectos/factura-viva.html">Factura Viva</a></h3>
     <p class="tarjeta__pregunta">¿En qué se fue la plata, cuánto salió de verdad de mis cuentas y cuánto puedo deducir en renta por mis facturas electrónicas?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>ZIP del correo</span></li><li><span>XML UBL 2.1</span></li><li><span>9 chequeos</span></li><li><span>Cuadre de saldos</span></li><li><span>Tablero</span></li></ol>
@@ -121,12 +121,12 @@
       <p class="tarjeta__grande-etiqueta">por factura DIAN leída desde el ZIP del correo</p>
     </div>
     <ul class="chequeos"><li><span><strong>Extractos de 5 productos bancarios</strong>Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a revisión en vez de adivinar</span></li><li><span><strong>Deducción del 1 % en renta (art. 336-5)</strong>Reglas tributarias como datos, con fuente y vigencia; cada fila apunta a su archivo y huella SHA-256</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">93</b> pruebas</span><span>Los datos personales nunca salen del equipo</span></p>
+    <p class="tarjeta__pie"><span><b class="num">93</b> pruebas en CI</span><span>Los datos personales nunca salen del equipo</span></p>
   </div>
 </article>
 <article class="tarjeta" id="nomina-clara">
   <div>
-    <p class="etiqueta">Cumplimiento laboral · <span class="num">72</span> pruebas</p>
+    <p class="etiqueta">Cumplimiento laboral · <span class="num">72</span> pruebas en CI</p>
     <h3><a href="/proyectos/nomina-clara.html">Nómina Clara</a></h3>
     <p class="tarjeta__pregunta">¿Cuánto cuesta de verdad un turno, una hora extra o una liquidación, ahora que la Ley 2466 cambia las reglas por fechas?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>Norma oficial</span></li><li><span>Regla en YAML</span></li><li><span>Regla vigente por fecha</span></li><li><span>Minuto a minuto</span></li><li><span>Resultado con cita</span></li></ol>
@@ -139,12 +139,12 @@
       <p class="tarjeta__grande-etiqueta">con norma, artículo, URL oficial y cita textual</p>
     </div>
     <ul class="chequeos"><li><span><strong>Recargos calculados minuto a minuto con la regla vigente ese día</strong>36 reglas con norma, artículo, URL oficial, fecha de consulta y cita textual</span></li><li><span><strong>Liquidación completa: cesantías, intereses, prima, vacaciones e indemnización</strong>El cargador rechaza una regla marcada como verificada si no tiene fuente primaria</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">72</b> pruebas</span><span>No es asesoría jurídica</span></p>
+    <p class="tarjeta__pie"><span><b class="num">72</b> pruebas en CI</span><span>No es asesoría jurídica</span></p>
   </div>
 </article>
 <article class="tarjeta" id="mycents">
   <div>
-    <p class="etiqueta">Aplicación local-first · <span class="num">195</span> pruebas</p>
+    <p class="etiqueta">Aplicación local-first · <span class="num">195</span> pruebas en CI</p>
     <h3><a href="/proyectos/mycents.html">MyCents</a></h3>
     <p class="tarjeta__pregunta">Finanzas personales que viven en tu equipo y se respaldan en Google Drive sin pisar nunca tus datos.</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>SQLite local</span></li><li><span>Centavos enteros</span></li><li><span>Índice cubriente</span></li><li><span>Matriz de sincronización</span></li><li><span>Drive</span></li></ol>
@@ -157,12 +157,12 @@
       <p class="tarjeta__grande-etiqueta">vista mensual sobre un millón de gastos</p>
     </div>
     <ul class="chequeos"><li><span><strong>Sincronización que nunca fusiona a ciegas</strong>Matriz local/remoto con conflicto explícito; descargas validadas con MD5 e integridad antes de reemplazar</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">195</b> pruebas</span><span>Windows y Android</span></p>
+    <p class="tarjeta__pie"><span><b class="num">195</b> pruebas en CI</span><span>Windows y Android</span></p>
   </div>
 </article>
 <article class="tarjeta" id="seguimiento-de-mirada">
   <div>
-    <p class="etiqueta">Visión por computador · <span class="num">86</span> pruebas</p>
+    <p class="etiqueta">Visión por computador · <span class="num">85</span> pruebas en CI</p>
     <h3><a href="/proyectos/seguimiento-de-mirada.html">Seguimiento de mirada</a></h3>
     <p class="tarjeta__pregunta">¿Hacia dónde miras en la pantalla, usando solo la webcam y sin que ningún fotograma salga del equipo?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>Webcam</span></li><li><span>Puntos del rostro</span></li><li><span>Rayo 3D</span></li><li><span>Ridge + corrector</span></li><li><span>Mapa de calor</span></li></ol>
@@ -175,7 +175,25 @@
       <p class="tarjeta__grande-etiqueta">error con la cabeza girada 20° (antes 532 px)</p>
     </div>
     <ul class="chequeos"><li><span><strong>Validación honesta</strong>Los puntos fijos nunca entran al entrenamiento; exactitud y temblor se reportan por separado</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">86</b> pruebas</span><span>100 % local, solo CPU</span></p>
+    <p class="tarjeta__pie"><span><b class="num">85</b> pruebas en CI</span><span>100 % local, solo CPU</span></p>
+  </div>
+</article>
+<article class="tarjeta" id="huella">
+  <div>
+    <p class="etiqueta">Monitoreo de recursos · <span class="num">116</span> pruebas en CI</p>
+    <h3><a href="/proyectos/huella.html">Huella</a></h3>
+    <p class="tarjeta__pregunta">¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?</p>
+    <ol class="flujo" aria-label="Flujo de datos"><li><span>psutil</span></li><li><span>Recolector</span></li><li><span>Detectores</span></li><li><span>Lote cada 5 min</span></li><li><span>SQLite</span></li></ol>
+    <ul class="pila" aria-label="Tecnologías"><li>Python</li><li>psutil</li><li>SQLite</li><li>PyQt6</li></ul>
+    <div class="enlaces"><a href="/proyectos/huella.html">Cómo se hizo →</a><a href="https://github.com/JohanGB/huella">Código</a></div>
+  </div>
+  <div class="tarjeta__lado">
+    <div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-9" aria-label="0 ms: fuente y método">0<small>ms</small></button><span class="ficha-traza" id="traza-9" role="group" aria-label="0 ms"><dl><dt>Fuente</dt><dd>Medición del demonio en una VM Linux de 2 vCPU (Python 3.13, psutil 7.2)</dd><dt>Método</dt><dd>Proceso observado desde afuera con tools/bench.py: CPU, cambios de contexto y bytes escritos</dd></dl><a href="https://github.com/JohanGB/huella">Ver en el repositorio →</a></span></span></div>
+      <p class="tarjeta__grande-etiqueta">de CPU en 5 minutos de modo Gaming</p>
+    </div>
+    <ul class="chequeos"><li><span><strong>Fugas detectadas en el 99,4–100 % de los casos</strong>5.000 series sintéticas de 30 minutos; 0 % de alertas en series estables</span></li></ul>
+    <p class="tarjeta__pie"><span><b class="num">116</b> pruebas en CI</span><span>Solo lectura, sin red</span></p>
   </div>
 </article>
       </div>
@@ -189,7 +207,7 @@
         <li class="paso"><h3>Fuente con huella</h3><p>Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.</p><small>Dónde se ve: Mercado al Día, Factura Viva</small></li>
         <li class="paso"><h3>Supuestos como datos</h3><p>Reglas tributarias, laborales y de categorías viven en archivos versionados con fuente, vigencia y estado de verificación. Nada legal queda escrito a mano en el código.</p><small>Dónde se ve: Nómina Clara, Factura Viva</small></li>
         <li class="paso"><h3>Validación fijada antes de mirar</h3><p>El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.</p><small>Dónde se ve: Mercado al Día, Seguimiento de mirada</small></li>
-        <li class="paso"><h3>Mejor abstenerse que equivocarse</h3><p>Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.</p><small>Dónde se ve: Los cinco proyectos</small></li>
+        <li class="paso"><h3>Mejor abstenerse que equivocarse</h3><p>Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.</p><small>Dónde se ve: Los seis proyectos</small></li>
       </ol>
     </div>
   </section>

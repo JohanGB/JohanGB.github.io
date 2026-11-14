@@ -54,7 +54,7 @@
   <div class="contenedor">
     <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Gaze tracker</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Computer vision · <span class="num">86</span> tests</p>
+      <p class="etiqueta">Computer vision · <span class="num">85</span> tests passing in CI</p>
       <h1 class="detalle__titulo">Gaze tracker</h1>
       <p class="detalle__pregunta">Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</p>
       <div class="portada__cta" style="margin-bottom:48px">
@@ -78,7 +78,7 @@
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>It estimates where you are looking on the screen with a webcam, warns you after more than 3 seconds looking away, and on exit generates a heatmap of your fixations. Everything runs locally on the CPU: no frame is written to disk or leaves the computer.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>A ~90-second click-free calibration: follow a circle with your head still, then moving it slowly, then look at 9 + 5 fixed points.</li><li>First real data: one person, three sessions.</li></ul></div></section>
       <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>Face and iris landmarks with MediaPipe; head pose with solvePnP; the camera–iris ray is intersected with the eyeball to get a 3D gaze vector.</li><li>Ridge with an RBF-kernel corrector on the residual, and a One Euro filter for smoothing.</li><li>Why Ridge, not SVR: an RBF-SVR regresses to the mean outside the training data; with the real gaze at 1.25 screen widths, Ridge flagged &quot;off-screen&quot; 100 % of the time, SVR 0 %.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Fixed points are never used for training: they measure the real error. Accuracy (bias) and precision (jitter) are reported separately.</li><li>Median error in simulation (1920×1080): calibration pose, 49 px classic vs. 45 px 3D geometry; 20° head yaw, 532 px vs. 87 px; combined movement, 593 px vs. 167 px.</li><li>Personal calibration cut moved-head error from 100–245 px to 17–37 px. CPU: about 25 % of one core at 15 FPS.</li><li>86 automated tests; the UI is tested with real threads and headless Qt.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Fixed points are never used for training: they measure the real error. Accuracy (bias) and precision (jitter) are reported separately.</li><li>Median error in simulation (1920×1080): calibration pose, 49 px classic vs. 45 px 3D geometry; 20° head yaw, 532 px vs. 87 px; combined movement, 593 px vs. 167 px.</li><li>Personal calibration cut moved-head error from 100–245 px to 17–37 px. CPU: about 25 % of one core at 15 FPS.</li><li>87 automated tests (85 pass in CI; 2 are skipped without the downloaded MediaPipe model); the UI is tested with real threads and headless Qt.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>Not yet validated with multiple real users; first real data showed excellent horizontal tracking (R² 0.97–0.98) but weak vertical tracking.</li><li>640×480 resolution limits precision to screen zones, not words.</li><li>Extreme poses roughly double the error. Single monitor.</li></ul></div></section>
     </div>
     
@@ -89,6 +89,7 @@
         <li><a href="/en/projects/factura-viva.html"><b>Factura Viva</b><span>Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</span></a></li>
         <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
         <li><a href="/en/projects/mycents.html"><b>MyCents</b><span>Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</span></a></li>
+        <li><a href="/en/projects/huella.html"><b>Huella</b><span>Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</span></a></li>
       </ul>
       <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
     </section>

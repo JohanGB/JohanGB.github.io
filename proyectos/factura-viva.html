@@ -54,7 +54,7 @@
   <div class="contenedor">
     <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/#proyectos">Proyectos</a> / <span aria-current="page">Factura Viva</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Finanzas personales y tributación · <span class="num">93</span> pruebas</p>
+      <p class="etiqueta">Finanzas personales y tributación · <span class="num">93</span> pruebas en CI</p>
       <h1 class="detalle__titulo">Factura Viva</h1>
       <p class="detalle__pregunta">¿En qué se fue la plata, cuánto salió de verdad de mis cuentas y cuánto puedo deducir en renta por mis facturas electrónicas?</p>
       <div class="portada__cta" style="margin-bottom:48px">
@@ -78,7 +78,7 @@
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problema</h2><div class="capitulo__texto"><p>Convierte las facturas electrónicas de la DIAN (los ZIP que llegan al correo) y los extractos bancarios en respuestas concretas: en qué se fue la plata, cuánto salió de verdad de las cuentas, cuánto se puede deducir en renta por el 1 % de compras con factura electrónica y qué productos subieron de precio.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Datos</h2><div class="capitulo__texto"><ul><li>Facturas: ZIP → XML AttachedDocument → factura UBL 2.1, sin duplicados por CUFE.</li><li>Extractos: plantillas para AV Villas (tarjeta), Caja Social, Nequi, Nu cuenta y Nu tarjeta, y un lector genérico para bancos nuevos.</li><li>Los datos personales no salen de la carpeta local; de las cuentas solo se guardan los últimos cuatro dígitos. Las contraseñas de los PDF se piden en pantalla y nunca se guardan.</li></ul></div></section>
       <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><ul><li>Categorías por reglas en YAML, registrando qué regla decidió.</li><li>Salida real de dinero: egresos de los extractos menos transferencias entre productos propios.</li><li>Deducción: 1 % de las compras con factura electrónica, con tope de 240 UVT (art. 336-5 del Estatuto Tributario).</li><li>Alertas de precio: mismo producto y emisor, precio actual frente a la mediana anterior.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>9 chequeos por factura: líneas más impuestos igual al total, CUFE y validación DIAN.</li><li>Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a una cola de revisión.</li><li>Datos crudos inmutables: si un archivo crudo cambia, el flujo se detiene. Cada fila guarda archivo de origen, SHA-256, línea o fila y versión del código.</li><li>93 pruebas automáticas.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>9 chequeos por factura: líneas más impuestos igual al total, CUFE y validación DIAN.</li><li>Saldo inicial más movimientos debe dar el saldo final; si no cuadra, va a una cola de revisión.</li><li>Datos crudos inmutables: si un archivo crudo cambia, el flujo se detiene. Cada fila guarda archivo de origen, SHA-256, línea o fila y versión del código.</li><li>95 pruebas automáticas; en la CI pasan 93 y 2 se omiten.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>Versión 0.2, fase 1: un MVP útil sin aprendizaje automático. Faltan 20 a 50 facturas etiquetadas para medir F1 por categoría y entrenar un modelo frente a la línea base de reglas.</li><li>Las alertas de precio necesitan dos compras del mismo producto en fechas distintas.</li><li>No es asesoría tributaria ni financiera.</li></ul></div></section>
     </div>
     <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/billive/blob/main/docs/uso_de_ia.md">Uso de IA documentado en este proyecto →</a></p>
@@ -89,6 +89,7 @@
         <li><a href="/proyectos/nomina-clara.html"><b>Nómina Clara</b><span>¿Cuánto cuesta de verdad un turno, una hora extra o una liquidación, ahora que la Ley 2466 cambia las reglas por fechas?</span></a></li>
         <li><a href="/proyectos/mycents.html"><b>MyCents</b><span>Finanzas personales que viven en tu equipo y se respaldan en Google Drive sin pisar nunca tus datos.</span></a></li>
         <li><a href="/proyectos/seguimiento-de-mirada.html"><b>Seguimiento de mirada</b><span>¿Hacia dónde miras en la pantalla, usando solo la webcam y sin que ningún fotograma salga del equipo?</span></a></li>
+        <li><a href="/proyectos/huella.html"><b>Huella</b><span>¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?</span></a></li>
       </ul>
       <p class="enlaces" style="margin-top:24px"><a href="/#proyectos">← Todos los proyectos</a></p>
     </section>

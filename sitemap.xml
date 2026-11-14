@@ -72,4 +72,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/seguimiento-de-mirada.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/seguimiento-de-mirada.html"/>
   </url>
+  <url>
+    <loc>https://johangb.github.io/proyectos/huella.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/huella.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/huella.html"/>
+  </url>
+  <url>
+    <loc>https://johangb.github.io/en/projects/huella.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/huella.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/huella.html"/>
+  </url>
 </urlset>
