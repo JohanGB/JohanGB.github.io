@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Factura Viva · Johan García</title>
+<meta name="description" content="Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?">
+<meta name="author" content="Johan Esteban García Bautista">
+<link rel="canonical" href="https://johangb.github.io/en/projects/factura-viva.html">
+<link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/factura-viva.html">
+<link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/factura-viva.html">
+<link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/factura-viva.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Johan García">
+<meta property="og:title" content="Factura Viva · Johan García">
+<meta property="og:description" content="Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?">
+<meta property="og:url" content="https://johangb.github.io/en/projects/factura-viva.html">
+<meta property="og:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Factura Viva · Johan García">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Factura Viva · Johan García">
+<meta name="twitter:description" content="Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?">
+<meta name="twitter:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1218" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibmplexsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fuentes.css">
+<link rel="stylesheet" href="/assets/css/sitio.css">
+<script>try{var t=localStorage.getItem('tema');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Skip to content</a><header class="barra">
+  <div class="contenedor barra__in">
+    <a class="barra__marca" href="/en/">Johan García</a>
+    <nav class="barra__nav" aria-label="Main navigation">
+      <a href="/en/#proyectos">Projects</a><a href="/en/#metodo">How I work</a><a href="/en/#investigacion">Research</a><a href="/en/#experiencia">Experience</a><a href="/en/#contacto">Contact</a>
+    </nav>
+    <div class="controles">
+      <div class="seg" role="group" aria-label="Language"><a href="/proyectos/factura-viva.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/en/projects/factura-viva.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+      <button class="icono-btn" type="button" data-tema data-etiqueta-oscuro="Switch to dark theme" data-etiqueta-claro="Switch to light theme" aria-label="Switch to dark theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Factura Viva</span></nav>
+    <header class="detalle__cabeza">
+      <p class="etiqueta">Personal finance and tax · <span class="num">93</span> tests</p>
+      <h1 class="detalle__titulo">Factura Viva</h1>
+      <p class="detalle__pregunta">Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</p>
+      <div class="portada__cta" style="margin-bottom:48px">
+        <a class="btn btn--primario" href="https://github.com/JohanGB/billive">Code</a>
+        
+      </div>
+      <div class="detalle__resumen">
+        <div>
+          <p class="etiqueta">Main result</p>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9 checks: source and method">9<small>checks</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9 checks"><dl><dt>Source</dt><dd>DIAN e-invoices (UBL 2.1 XML) and PDF bank statements</dd><dt>Method</dt><dd>Lines plus taxes equal total, CUFE and DIAN validation; each row points to its file and SHA-256 fingerprint</dd></dl><a href="https://github.com/JohanGB/billive">See it in the repository →</a></span></span></div>
+          <p class="tarjeta__grande-etiqueta">per DIAN invoice parsed straight from the email ZIP</p>
+        </div>
+        <div>
+          <p class="etiqueta">How it was checked</p>
+          <ul class="chequeos"><li><span><strong>Statements from 5 bank products</strong>Opening balance plus movements must equal closing balance; otherwise it goes to review instead of guessing</span></li><li><span><strong>1 % income tax deduction (art. 336-5)</strong>Tax rules as data with source and validity; each row points to its file and SHA-256 fingerprint</span></li></ul>
+        </div>
+      </div>
+      
+    </header>
+    <div class="capitulos">
+      <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>It turns DIAN electronic invoices (the ZIP files that arrive by email) and bank statements into concrete answers: where the money went, how much really left the accounts, how much can be deducted for the 1 % of e-invoiced purchases, and which products went up in price.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>Invoices: ZIP → AttachedDocument XML → UBL 2.1 invoice, de-duplicated by CUFE.</li><li>Statements: templates for AV Villas (credit card), Caja Social, Nequi, Nu account and Nu card, plus a generic reader for new banks.</li><li>Personal data never leaves the local folder; account numbers are kept as last four digits only. PDF passwords are requested at the prompt and never stored.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>Rule-based categories in YAML, recording which rule decided.</li><li>Real outflow: statement outflows minus transfers between my own products.</li><li>Deduction: 1 % of e-invoiced purchases, capped at 240 UVT (art. 336-5, Tax Code).</li><li>Price alerts: same product and issuer, current price vs. previous median.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>9 checks per invoice: lines plus taxes equal total, CUFE and DIAN validation.</li><li>Opening balance plus movements must equal closing balance; otherwise it goes to a review queue.</li><li>Immutable raw data: if a raw file changes, the pipeline stops. Each row keeps source file, SHA-256, line or row and code version.</li><li>93 automated tests.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>Version 0.2, phase 1: a useful MVP without machine learning. It still needs 20 to 50 labelled invoices to measure per-category F1 and train a model against the rule baseline.</li><li>Price alerts need two purchases of the same product on different dates.</li><li>Not tax or financial advice.</li></ul></div></section>
+    </div>
+    <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/billive/blob/main/docs/uso_de_ia.md">AI usage documented in this project →</a></p>
+    <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
+      <h2 class="etiqueta" id="t-otros">Other projects</h2>
+      <ul class="otros">
+        <li><a href="/en/projects/mercado-al-dia.html"><b>Mercado al Día</b><span>What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</span></a></li>
+        <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
+        <li><a href="/en/projects/mycents.html"><b>MyCents</b><span>Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</span></a></li>
+        <li><a href="/en/projects/seguimiento-de-mirada.html"><b>Gaze tracker</b><span>Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</span></a></li>
+      </ul>
+      <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
+    </section>
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md.</p>
+    <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
+  </div>
+</footer>
+<script src="/assets/js/sitio.js" defer></script>
+</body>
+</html>
