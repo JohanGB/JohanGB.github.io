@@ -325,7 +325,7 @@
           "como": { "es": "5.000 series sintéticas de 30 minutos; 0 % de alertas en series estables", "en": "5,000 synthetic 30-minute series; 0 % alerts on stable series" }
         }
       ],
-      "pruebas": 116,
+      "pruebas": 117,
       "pila": ["Python", "psutil", "SQLite", "PyQt6"],
       "nota": { "es": "Solo lectura, sin red", "en": "Read-only, no network" },
       "enlaces": { "codigo": "https://github.com/JohanGB/huella" },
@@ -352,8 +352,8 @@
           "en": ["One clock: only the collector thread has a timer; analyzer and writer wait on a queue without a timeout. That is why Gaming mode reaches zero.", "A leak is three conditions on the per-minute minimum over 30 minutes: growth of at least 64 MB and 10 %, Kendall tau ≥ 0.70, and a Theil-Sen slope over the last third of at least 33 % of the total, which separates a leak from a cache that fills up."]
         },
         "validacion": {
-          "es": ["Modo Gaming, 5 minutos: 0 ms de CPU, 0 cambios de contexto y 0 KB escritos (demonio). Activo: 0,04 % de CPU y 22,6 MB de RSS.", "Disco: el demonio real escribió unos 5,8 MB al día; en la simulación, los agregados piden 151 veces menos que una fila por proceso y tick.", "«Solo lectura» se comprueba: una prueba recorre el código y falla si aparece kill, terminate, subprocess, socket y similares.", "117 pruebas automáticas; en la CI de GitHub pasan 116 y una queda pendiente de revisar."],
-          "en": ["Gaming mode, 5 minutes: 0 ms CPU, 0 context switches and 0 KB written (daemon). Active: 0.04 % CPU and 22.6 MB RSS.", "Disk: the real daemon wrote about 5.8 MB a day; in simulation, aggregates request 151 times less than one row per process and tick.", "\"Read-only\" is tested: a test walks the code and fails if kill, terminate, subprocess, socket and similar appear.", "117 automated tests; 116 pass in GitHub CI and one is pending review."]
+          "es": ["Modo Gaming, 5 minutos: 0 ms de CPU, 0 cambios de contexto y 0 KB escritos (demonio). Activo: 0,04 % de CPU y 22,6 MB de RSS.", "Disco: el demonio real escribió unos 5,8 MB al día; en la simulación, los agregados piden 151 veces menos que una fila por proceso y tick.", "«Solo lectura» se comprueba: una prueba recorre el código y falla si aparece kill, terminate, subprocess, socket y similares.", "117 pruebas automáticas que pasan en la CI de GitHub; una es intermitente (depende de tiempos reales) y está pendiente de revisar."],
+          "en": ["Gaming mode, 5 minutes: 0 ms CPU, 0 context switches and 0 KB written (daemon). Active: 0.04 % CPU and 22.6 MB RSS.", "Disk: the real daemon wrote about 5.8 MB a day; in simulation, aggregates request 151 times less than one row per process and tick.", "\"Read-only\" is tested: a test walks the code and fails if kill, terminate, subprocess, socket and similar appear.", "117 automated tests that pass in GitHub CI; one is flaky (it depends on real timing) and is pending review."]
         },
         "limitaciones": {
           "es": ["Las cifras son de Linux; en Windows solo se probó con dobles de prueba, no en un equipo real.", "Cero de CPU, no de RAM: en modo Gaming el proceso sigue en memoria.", "Los umbrales de fugas se calibraron con series sintéticas; un paseo aleatorio dispara alertas en el 2,3–6,1 % de los casos."],
