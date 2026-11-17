@@ -57,7 +57,7 @@
       <h1 class="portada__nombre" id="nombre">Johan Esteban García Bautista</h1>
       <p class="portada__promesa">Herramientas de datos que muestran de dónde sale cada cifra. <em>Y cómo se comprobó.</em></p>
       <p class="portada__rol">Físico y analista de datos. Busco roles actuariales y de datos en seguros y banca.</p>
-      <p class="portada__cuerpo">Siete proyectos propios, en constante actualización, con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas.</p>
+      <p class="portada__cuerpo">Siete proyectos propios, en constante actualización, con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir.</p>
       <div class="portada__cta">
         <a class="btn btn--primario" href="/cv/GarciaJohan_CV_Data.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" stroke-linecap="round" stroke-linejoin="round"/></svg>Descargar CV</a>
         <a class="btn" href="mailto:johanesteban2003@gmail.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5 8 9l5.5-4.5" stroke-linejoin="round"/></svg>Escribirme</a>
@@ -113,15 +113,15 @@
     <p class="tarjeta__pregunta">¿Qué rango es razonable esperar para el dólar en Colombia, y qué tan confiable es ese rango?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>Prerregistro</span></li><li><span>Candado SHA-256</span></li><li><span>Prueba final</span></li><li><span>1 hipótesis confirmada</span></li><li><span>Auditoría independiente</span></li></ol>
     <ul class="pila" aria-label="Tecnologías"><li>Python</li><li>pandas</li><li>statsmodels</li><li>arch</li><li>LightGBM</li></ul>
-    <div class="enlaces"><a href="/proyectos/vektor-fx.html">Cómo se hizo →</a></div>
+    <div class="enlaces"><a href="/proyectos/vektor-fx.html">Cómo se hizo →</a><a href="https://github.com/JohanGB/laboratorio-escenarios">Código</a></div>
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-5" aria-label="0,977 CRPS/base: fuente y método">0,977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-5" role="group" aria-label="0,977 CRPS/base"><dl><dt>Fuente</dt><dd>Prueba final prerregistrada del proyecto (repositorio privado)</dd><dt>Método</dt><dd>lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente</dd></dl></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-5" aria-label="0,977 CRPS/base: fuente y método">0,977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-5" role="group" aria-label="0,977 CRPS/base"><dl><dt>Fuente</dt><dd>Prueba final prerregistrada del proyecto (reports/prueba_final.md)</dd><dt>Método</dt><dd>lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente</dd></dl><a href="https://github.com/JohanGB/laboratorio-escenarios">Ver en el repositorio →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">a 1 día: la única hipótesis confirmada</p>
     </div>
     <ul class="chequeos"><li><span><strong>Prerregistro con candado por hash SHA-256</strong>Hipótesis fijadas antes de abrir los datos de prueba</span></li><li><span><strong>Auditoría independiente</strong>Revisión independiente de la prueba final</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">365</b> pruebas locales</span><span>Código en revisión, se publicará próximamente</span></p>
+    <p class="tarjeta__pie"><span><b class="num">365</b> pruebas locales</span><span>No es asesoría financiera</span></p>
   </div>
 </article>
 <article class="tarjeta" id="factura-viva">
@@ -225,7 +225,7 @@
         <li class="paso"><h3>Fuente con huella</h3><p>Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.</p><small>Dónde se ve: NowMarket, Factura Viva</small></li>
         <li class="paso"><h3>Supuestos como datos</h3><p>Reglas tributarias, laborales y de categorías viven en archivos versionados con fuente, vigencia y estado de verificación. Nada legal queda escrito a mano en el código.</p><small>Dónde se ve: Nómina Clara, Factura Viva</small></li>
         <li class="paso"><h3>Validación fijada antes de mirar</h3><p>El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.</p><small>Dónde se ve: NowMarket, Seguimiento de mirada</small></li>
-        <li class="paso"><h3>Mejor abstenerse que equivocarse</h3><p>Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.</p><small>Dónde se ve: Los seis proyectos con código público</small></li>
+        <li class="paso"><h3>Mejor abstenerse que equivocarse</h3><p>Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.</p><small>Dónde se ve: Los siete proyectos</small></li>
       </ol>
     </div>
   </section>
@@ -300,7 +300,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y NowMarket lo documentan en docs/uso_de_ia.md.</p>
+    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara, NowMarket y Vektor FX lo documentan en docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Código de este sitio</a></p>
   </div>
 </footer>

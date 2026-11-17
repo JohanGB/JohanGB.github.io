@@ -57,11 +57,14 @@
       <p class="etiqueta">Pronóstico probabilístico de la TRM · <span class="num">365</span> pruebas locales</p>
       <h1 class="detalle__titulo">Vektor FX</h1>
       <p class="detalle__pregunta">¿Qué rango es razonable esperar para el dólar en Colombia, y qué tan confiable es ese rango?</p>
-      <p class="seccion__nota" style="margin-bottom:48px">Código en revisión, se publicará próximamente</p>
+      <div class="portada__cta" style="margin-bottom:48px">
+        <a class="btn btn--primario" href="https://github.com/JohanGB/laboratorio-escenarios">Código</a>
+        
+      </div>
       <div class="detalle__resumen">
         <div>
           <p class="etiqueta">Resultado principal</p>
-          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="0,977 CRPS/base: fuente y método">0,977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="0,977 CRPS/base"><dl><dt>Fuente</dt><dd>Prueba final prerregistrada del proyecto (repositorio privado)</dd><dt>Método</dt><dd>lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente</dd></dl></span></span></div>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="0,977 CRPS/base: fuente y método">0,977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="0,977 CRPS/base"><dl><dt>Fuente</dt><dd>Prueba final prerregistrada del proyecto (reports/prueba_final.md)</dd><dt>Método</dt><dd>lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente</dd></dl><a href="https://github.com/JohanGB/laboratorio-escenarios">Ver en el repositorio →</a></span></span></div>
           <p class="tarjeta__grande-etiqueta">a 1 día: la única hipótesis confirmada</p>
         </div>
         <div>
@@ -76,9 +79,9 @@
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Datos</h2><div class="capitulo__texto"><p>Serie de la TRM (pesos por dólar).</p></div></section>
       <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><p>Prerregistro con candado por hash SHA-256: hipótesis y métricas fijadas antes de abrir los datos de prueba.</p></div></section>
       <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.</li><li>Auditoría independiente de la prueba final.</li><li>365 pruebas automáticas.</li></ul></div></section>
-      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>Código en revisión, se publicará próximamente; mientras tanto, las cifras no se pueden verificar desde fuera.</li><li>No es asesoría financiera; los rangos describen incertidumbre.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>No hay CI: las 365 pruebas se corren en local con pytest.</li><li>No es asesoría financiera; los rangos describen incertidumbre.</li></ul></div></section>
     </div>
-    
+    <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/laboratorio-escenarios/blob/main/docs/uso_de_ia.md">Uso de IA documentado en este proyecto →</a></p>
     <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
       <h2 class="etiqueta" id="t-otros">Otros proyectos</h2>
       <ul class="otros">
@@ -95,7 +98,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y NowMarket lo documentan en docs/uso_de_ia.md.</p>
+    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara, NowMarket y Vektor FX lo documentan en docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Código de este sitio</a></p>
   </div>
 </footer>

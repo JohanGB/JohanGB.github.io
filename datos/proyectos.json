@@ -82,7 +82,7 @@
         "valor": { "es": "0,977", "en": "0.977" },
         "unidad": "CRPS/base",
         "etiqueta": { "es": "a 1 día: la única hipótesis confirmada", "en": "at 1 day: the only confirmed hypothesis" },
-        "fuente": { "es": "Prueba final prerregistrada del proyecto (repositorio privado)", "en": "The project's preregistered final test (private repository)" },
+        "fuente": { "es": "Prueba final prerregistrada del proyecto (reports/prueba_final.md)", "en": "The project's preregistered final test (reports/prueba_final.md)" },
         "metodo": {
           "es": "lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente",
           "en": "lightgbm_cuantiles at h = 1 vs. the baseline; preregistration locked by SHA-256 hash and independent audit"
@@ -102,8 +102,8 @@
       "pruebas": 365,
       "ci": false,
       "pila": ["Python", "pandas", "statsmodels", "arch", "LightGBM"],
-      "nota": { "es": "Código en revisión, se publicará próximamente", "en": "Code under review, to be published soon" },
-      "enlaces": {},
+      "nota": { "es": "No es asesoría financiera", "en": "Not financial advice" },
+      "enlaces": { "codigo": "https://github.com/JohanGB/laboratorio-escenarios" },
       "flujo": {
         "es": ["Prerregistro", "Candado SHA-256", "Prueba final", "1 hipótesis confirmada", "Auditoría independiente"],
         "en": ["Preregistration", "SHA-256 lock", "Final test", "1 confirmed hypothesis", "Independent audit"]
@@ -134,10 +134,11 @@
           "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "365 automated tests."]
         },
         "limitaciones": {
-          "es": ["Código en revisión, se publicará próximamente; mientras tanto, las cifras no se pueden verificar desde fuera.", "No es asesoría financiera; los rangos describen incertidumbre."],
-          "en": ["Code under review, to be published soon; until then, the numbers cannot be verified from outside.", "Not financial advice; the ranges describe uncertainty."]
+          "es": ["No hay CI: las 365 pruebas se corren en local con pytest.", "No es asesoría financiera; los rangos describen incertidumbre."],
+          "en": ["There is no CI: the 365 tests are run locally with pytest.", "Not financial advice; the ranges describe uncertainty."]
         }
-      }
+      },
+      "uso_de_ia": "https://github.com/JohanGB/laboratorio-escenarios/blob/main/docs/uso_de_ia.md"
     },
     {
       "slug": "factura-viva",
