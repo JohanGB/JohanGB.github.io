@@ -305,7 +305,7 @@
     },
     {
       "slug": "huella",
-      "nombre": { "es": "Huella", "en": "Huella" },
+      "nombre": { "es": "Quietwatch", "en": "Quietwatch" },
       "tipo": { "es": "Monitoreo de recursos", "en": "Resource monitoring" },
       "pregunta": {
         "es": "¿Qué aplicación se está comiendo la memoria o la CPU del equipo, sin que medirlo gaste esos mismos recursos?",
@@ -328,14 +328,14 @@
       "pruebas": 117,
       "pila": ["Python", "psutil", "SQLite", "PyQt6"],
       "nota": { "es": "Solo lectura, sin red", "en": "Read-only, no network" },
-      "enlaces": { "codigo": "https://github.com/JohanGB/huella" },
+      "enlaces": { "codigo": "https://github.com/JohanGB/quietwatch" },
       "flujo": {
         "es": ["psutil", "Recolector", "Detectores", "Lote cada 5 min", "SQLite"],
         "en": ["psutil", "Collector", "Detectors", "Batch every 5 min", "SQLite"]
       },
       "imagen": {
         "src": "/assets/img/huella.webp", "ancho": 980, "alto": 620,
-        "alt": { "es": "Panel mensual de Huella con CPU, RAM y disco por aplicación", "en": "Huella monthly dashboard with CPU, RAM and disk per application" },
+        "alt": { "es": "Panel mensual de Quietwatch con CPU, RAM y disco por aplicación", "en": "Quietwatch monthly dashboard with CPU, RAM and disk per application" },
         "pie": { "es": "Panel mensual con datos de demostración.", "en": "Monthly dashboard with demo data." }
       },
       "detalle": {
