@@ -65,9 +65,9 @@
       </div>
       <div class="metricas">
         <div class="metrica">
-          <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9,2 %: fuente y método">9,2<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9,2 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>LightGBM, prueba única 2023-11 a 2026-09 fijada antes de mirar resultados; origen rodante sin fuga</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
+          <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9,7 %: fuente y método">9,7<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9,7 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>Ingenuo calibrado (el precio se mantiene, con rango del 80 %), prueba 2023-11 a 2026-09 fijada antes de mirar resultados y ya usada dos veces; origen rodante sin fuga; auditoría independiente</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
           <p class="metrica__etiqueta">error típico del pronóstico a 1 mes</p>
-          <p class="metrica__proyecto"><a href="/proyectos/mercado-al-dia.html">Mercado al Día</a></p>
+          <p class="metrica__proyecto"><a href="/proyectos/mercado-al-dia.html">NowMarket</a></p>
         </div>
         <div class="metrica">
           <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-2" aria-label="36 reglas: fuente y método">36<small>reglas</small></button><span class="ficha-traza" id="traza-2" role="group" aria-label="36 reglas"><dl><dt>Fuente</dt><dd>Ley 2466 de 2025, Ley 2101 de 2021 y textos oficiales (Función Pública, Corte Constitucional, UGPP)</dd><dt>Método</dt><dd>Cada regla guarda valor, vigencia, fecha de consulta y cita; el cargador rechaza una regla marcada como verificada si no tiene fuente primaria</dd></dl><a href="https://github.com/JohanGB/nomina-clara">Ver en el repositorio →</a></span></span></div>
@@ -90,20 +90,20 @@
       <div class="proyectos">
 <article class="tarjeta" id="mercado-al-dia">
   <div>
-    <p class="etiqueta">Pronóstico de precios · <span class="num">50</span> pruebas en CI</p>
-    <h3><a href="/proyectos/mercado-al-dia.html">Mercado al Día</a></h3>
+    <p class="etiqueta">Precios mayoristas mensuales · <span class="num">71</span> pruebas en CI</p>
+    <h3><a href="/proyectos/mercado-al-dia.html">NowMarket</a></h3>
     <p class="tarjeta__pregunta">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
     <ol class="flujo" aria-label="Flujo de datos"><li><span>SIPSA y ONI</span></li><li><span>Huella SHA-256</span></li><li><span>Panel limpio</span></li><li><span>Origen rodante</span></li><li><span>Página publicada</span></li></ol>
-    <ul class="pila" aria-label="Tecnologías"><li>Python</li><li>pandas</li><li>LightGBM</li><li>statsmodels</li><li>JAX</li></ul>
+    <ul class="pila" aria-label="Tecnologías"><li>Python</li><li>pandas</li><li>LightGBM (evaluado)</li><li>statsmodels</li><li>JAX</li></ul>
     <div class="enlaces"><a href="/proyectos/mercado-al-dia.html">Cómo se hizo →</a><a href="https://github.com/JohanGB/NowMarket">Código</a><a href="/demo/mercado.html">Página publicada</a></div>
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-4" aria-label="9,2 %: fuente y método">9,2<small>%</small></button><span class="ficha-traza" id="traza-4" role="group" aria-label="9,2 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>LightGBM, prueba única 2023-11 a 2026-09 fijada antes de mirar resultados; origen rodante sin fuga</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-4" aria-label="9,7 %: fuente y método">9,7<small>%</small></button><span class="ficha-traza" id="traza-4" role="group" aria-label="9,7 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>Ingenuo calibrado (el precio se mantiene, con rango del 80 %), prueba 2023-11 a 2026-09 fijada antes de mirar resultados y ya usada dos veces; origen rodante sin fuga; auditoría independiente</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">error típico del pronóstico a 1 mes</p>
     </div>
-    <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 82,6–83,3 %</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">50</b> pruebas en CI</span><span>Datos: SIPSA (DANE), NOAA</span></p>
+    <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 80,6–82,8 % en la prueba</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap en bloques</span></li></ul>
+    <p class="tarjeta__pie"><span><b class="num">71</b> pruebas en CI</span><span>Datos: SIPSA (DANE), NOAA</span></p>
   </div>
 </article>
 <article class="tarjeta" id="factura-viva">
@@ -204,9 +204,9 @@
     <div class="contenedor">
       <div class="seccion__cabeza"><h2 class="seccion__titulo" id="t-metodo">Cómo trabajo</h2><p class="seccion__nota">Los mismos cuatro pasos en cada proyecto, para que cualquiera pueda repetir el resultado.</p></div>
       <ol class="pasos">
-        <li class="paso"><h3>Fuente con huella</h3><p>Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.</p><small>Dónde se ve: Mercado al Día, Factura Viva</small></li>
+        <li class="paso"><h3>Fuente con huella</h3><p>Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.</p><small>Dónde se ve: NowMarket, Factura Viva</small></li>
         <li class="paso"><h3>Supuestos como datos</h3><p>Reglas tributarias, laborales y de categorías viven en archivos versionados con fuente, vigencia y estado de verificación. Nada legal queda escrito a mano en el código.</p><small>Dónde se ve: Nómina Clara, Factura Viva</small></li>
-        <li class="paso"><h3>Validación fijada antes de mirar</h3><p>El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.</p><small>Dónde se ve: Mercado al Día, Seguimiento de mirada</small></li>
+        <li class="paso"><h3>Validación fijada antes de mirar</h3><p>El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.</p><small>Dónde se ve: NowMarket, Seguimiento de mirada</small></li>
         <li class="paso"><h3>Mejor abstenerse que equivocarse</h3><p>Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.</p><small>Dónde se ve: Los seis proyectos</small></li>
       </ol>
     </div>
@@ -247,7 +247,7 @@
         <li class="cargo"><div class="cargo__fechas num">01/2022 – 12/2023</div><div><h3>Analista de Información Académica</h3><p class="cargo__lugar">Universidad de los Andes · Bogotá</p><ul class="lista"><li>Tableros de seguimiento académico para más de 50 estudiantes de 3 cursos; tutorías y laboratorios de Python, C++ y métodos estadísticos.</li></ul></div></li>
       </ol>
       <div class="extra">
-        <p><strong>Herramientas:</strong> Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Excel avanzado · R · Git</p>
+        <p><strong>Herramientas:</strong> Python (pandas, scikit-learn, LightGBM (evaluado en el experimento), statsmodels) · SQL · Power BI (DAX, Power Query) · Excel avanzado · R · Git</p>
         <p><strong>Certificaciones:</strong> Google Data Analytics · IBM Data Analytics · Programa Especializado en Ciencia de Datos y Analítica Financiera (Uniandes) · Proceso Estadístico (DANE)</p>
       </div>
     </div>
@@ -282,7 +282,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en docs/uso_de_ia.md.</p>
+    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y NowMarket lo documentan en docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Código de este sitio</a></p>
   </div>
 </footer>
