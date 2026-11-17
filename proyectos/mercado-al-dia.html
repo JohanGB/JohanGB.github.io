@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mercado al Día · Johan García</title>
+<title>NowMarket · Johan García</title>
 <meta name="description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
 <meta name="author" content="Johan Esteban García Bautista">
 <link rel="canonical" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
@@ -12,17 +12,17 @@
 <link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Johan García">
-<meta property="og:title" content="Mercado al Día · Johan García">
+<meta property="og:title" content="NowMarket · Johan García">
 <meta property="og:description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
 <meta property="og:url" content="https://johangb.github.io/proyectos/mercado-al-dia.html">
 <meta property="og:image" content="https://johangb.github.io/assets/img/og-es.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mercado al Día · Johan García">
+<meta property="og:image:alt" content="NowMarket · Johan García">
 <meta property="og:locale" content="es_CO">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mercado al Día · Johan García">
+<meta name="twitter:title" content="NowMarket · Johan García">
 <meta name="twitter:description" content="¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?">
 <meta name="twitter:image" content="https://johangb.github.io/assets/img/og-es.png">
 <meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
@@ -52,10 +52,10 @@
 </header>
 <main id="contenido">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/#proyectos">Proyectos</a> / <span aria-current="page">Mercado al Día</span></nav>
+    <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/#proyectos">Proyectos</a> / <span aria-current="page">NowMarket</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Pronóstico de precios · <span class="num">50</span> pruebas en CI</p>
-      <h1 class="detalle__titulo">Mercado al Día</h1>
+      <p class="etiqueta">Precios mayoristas mensuales · <span class="num">71</span> pruebas en CI</p>
+      <h1 class="detalle__titulo">NowMarket</h1>
       <p class="detalle__pregunta">¿Qué está barato este mes en Corabastos, cuánto costará el próximo y qué conviene esperar?</p>
       <div class="portada__cta" style="margin-bottom:48px">
         <a class="btn btn--primario" href="https://github.com/JohanGB/NowMarket">Código</a>
@@ -64,21 +64,21 @@
       <div class="detalle__resumen">
         <div>
           <p class="etiqueta">Resultado principal</p>
-          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9,2 %: fuente y método">9,2<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9,2 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>LightGBM, prueba única 2023-11 a 2026-09 fijada antes de mirar resultados; origen rodante sin fuga</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9,7 %: fuente y método">9,7<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9,7 %"><dl><dt>Fuente</dt><dd>Precios mayoristas SIPSA (DANE) e índice ONI (NOAA)</dd><dt>Método</dt><dd>Ingenuo calibrado (el precio se mantiene, con rango del 80 %), prueba 2023-11 a 2026-09 fijada antes de mirar resultados y ya usada dos veces; origen rodante sin fuga; auditoría independiente</dd></dl><a href="https://github.com/JohanGB/NowMarket">Ver en el repositorio →</a></span></span></div>
           <p class="tarjeta__grande-etiqueta">error típico del pronóstico a 1 mes</p>
         </div>
         <div>
           <p class="etiqueta">Cómo se comprobó</p>
-          <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 82,6–83,3 %</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap</span></li></ul>
+          <ul class="chequeos"><li><span><strong>Rangos del 80 % que cubrieron el 80,6–82,8 % en la prueba</strong>Calibración conformal (CQR) por horizonte</span></li><li><span><strong>N-BEATS (aprendizaje profundo) no se desplegó</strong>Perdió contra el modelo ingenuo en todos los horizontes; la regla exige ganar con IC 90 % por bootstrap en bloques</span></li></ul>
         </div>
       </div>
-      <figure class="figura detalle__figura"><img src="/assets/img/mercado-al-dia.webp" width="1200" height="750" alt="Página publicada de Mercado al Día con precios del mes" decoding="async"><figcaption>Página publicada, generada por el propio proyecto.</figcaption></figure>
+      <figure class="figura detalle__figura"><img src="/assets/img/mercado-al-dia.webp" width="1200" height="750" alt="Página publicada de NowMarket con precios del mes" decoding="async"><figcaption>Página publicada, generada por el propio proyecto.</figcaption></figure>
     </header>
     <div class="capitulos">
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problema</h2><div class="capitulo__texto"><p>Responde qué está barato este mes, en qué meses suele subir cada producto y cuánto costará en 1, 2 y 3 meses, con precios mayoristas de Bogotá y la Sabana y Corabastos como referencia.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Datos</h2><div class="capitulo__texto"><ul><li>Series mensuales de precios mayoristas y abastecimiento del SIPSA (DANE) e índice ONI de El Niño (NOAA CPC).</li><li>Los datos crudos no se redistribuyen: el script los descarga y registra su huella SHA-256. Cada precio cita el archivo, la hoja y la fila de la hoja de cálculo del DANE.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><ul><li>Perfil estacional con media móvil 2×12 sobre logaritmos de precio.</li><li>LightGBM a 1 mes e ingenuo calibrado a 2 y 3 meses, con rangos del 80 % por calibración conformal (CQR).</li><li>SARIMAX con el índice ONI no mejoró de forma significativa al ingenuo; N-BEATS perdió en todos los horizontes.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap y una prueba única (2023-11 a 2026-09).</li><li>Resultado en la prueba única: 1 mes, LightGBM, error típico 9,2 % y cobertura 83,3 %; 2 meses, ingenuo calibrado, 16,0 % y 83,0 %; 3 meses, 20,2 % y 82,6 %.</li><li>El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.</li><li>51 pruebas automáticas que corren sin internet; en la CI pasan 50 y 1 se omite.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Método</h2><div class="capitulo__texto"><ul><li>Perfil estacional con media móvil 2×12 sobre logaritmos de precio.</li><li>Ingenuo calibrado a 1, 2 y 3 meses, con rangos del 80 % por calibración conformal (CQR). LightGBM mejoró en validación, pero no superó la regla de despliegue a 1 mes (IC 90 % [−0,7 %; +8,6 %]).</li><li>SARIMAX con el índice ONI no mejoró de forma significativa al ingenuo; N-BEATS perdió en todos los horizontes.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validación</h2><div class="capitulo__texto"><ul><li>Protocolo fijado antes de ver la prueba: origen rodante sin fuga, selección en validación (2021-11 a 2023-10), regla de despliegue con IC 90 % por bootstrap en bloques y prueba 2023-11 a 2026-09. Una auditoría independiente encontró errores de método (D-030); se corrigieron y la prueba se repitió una sola vez, así que ya no sirve para decidir de nuevo.</li><li>Resultado en la prueba (versión 1.1.0): ingenuo calibrado a los tres horizontes; 1 mes, error típico 9,7 % y cobertura 80,6 %; 2 meses, 16,0 % y 82,8 %; 3 meses, 20,2 % y 82,3 %.</li><li>El consejo «suele subir/bajar» acierta el 78,2 % de las veces frente al 73,7 % de la línea base.</li><li>72 pruebas automáticas que corren sin internet. Con JAX instalado, 71 pasan y 1 es un fallo esperado documentado; en Windows, donde la CI no instala JAX, se omiten 3 pruebas de N-BEATS y pasan 68.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitaciones</h2><div class="capitulo__texto"><ul><li>El SIPSA mide el precio de venta mayorista en la central de abastos, con IVA, en pesos de cada mes. En una tienda el precio es mayor (transporte, mermas, margen). Sirve para anticipar subidas, bajadas y temporadas, no para saber cuánto pagará en la tienda.</li><li>No es asesoría financiera.</li></ul></div></section>
     </div>
     <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md">Uso de IA documentado en este proyecto →</a></p>
@@ -97,7 +97,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en docs/uso_de_ia.md.</p>
+    <p>Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y NowMarket lo documentan en docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Código de este sitio</a></p>
   </div>
 </footer>

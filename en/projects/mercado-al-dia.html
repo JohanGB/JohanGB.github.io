@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mercado al Día · Johan García</title>
+<title>NowMarket · Johan García</title>
 <meta name="description" content="What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?">
 <meta name="author" content="Johan Esteban García Bautista">
 <link rel="canonical" href="https://johangb.github.io/en/projects/mercado-al-dia.html">
@@ -12,17 +12,17 @@
 <link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/mercado-al-dia.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Johan García">
-<meta property="og:title" content="Mercado al Día · Johan García">
+<meta property="og:title" content="NowMarket · Johan García">
 <meta property="og:description" content="What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?">
 <meta property="og:url" content="https://johangb.github.io/en/projects/mercado-al-dia.html">
 <meta property="og:image" content="https://johangb.github.io/assets/img/og-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mercado al Día · Johan García">
+<meta property="og:image:alt" content="NowMarket · Johan García">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_CO">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mercado al Día · Johan García">
+<meta name="twitter:title" content="NowMarket · Johan García">
 <meta name="twitter:description" content="What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?">
 <meta name="twitter:image" content="https://johangb.github.io/assets/img/og-en.png">
 <meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
@@ -52,10 +52,10 @@
 </header>
 <main id="contenido">
   <div class="contenedor">
-    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Mercado al Día</span></nav>
+    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">NowMarket</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">Price forecasting · <span class="num">50</span> tests passing in CI</p>
-      <h1 class="detalle__titulo">Mercado al Día</h1>
+      <p class="etiqueta">Monthly wholesale prices · <span class="num">71</span> tests passing in CI</p>
+      <h1 class="detalle__titulo">NowMarket</h1>
       <p class="detalle__pregunta">What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</p>
       <div class="portada__cta" style="margin-bottom:48px">
         <a class="btn btn--primario" href="https://github.com/JohanGB/NowMarket">Code</a>
@@ -64,21 +64,21 @@
       <div class="detalle__resumen">
         <div>
           <p class="etiqueta">Main result</p>
-          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9.2 %: source and method">9.2<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9.2 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>LightGBM, single held-out test 2023-11 to 2026-09 fixed in advance; leak-free rolling origin</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9.7 %: source and method">9.7<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9.7 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>Calibrated naive (price stays, with an 80 % range), test 2023-11 to 2026-09 fixed in advance and already used twice; leak-free rolling origin; independent audit</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
           <p class="tarjeta__grande-etiqueta">typical error of the 1-month forecast</p>
         </div>
         <div>
           <p class="etiqueta">How it was checked</p>
-          <ul class="chequeos"><li><span><strong>80 % intervals that covered 82.6–83.3 %</strong>Conformal calibration (CQR) per horizon</span></li><li><span><strong>N-BEATS (deep learning) was not deployed</strong>Lost to the naive model on every horizon; the rule requires a win with a 90 % bootstrap CI</span></li></ul>
+          <ul class="chequeos"><li><span><strong>80 % intervals that covered 80.6–82.8 % in the test</strong>Conformal calibration (CQR) per horizon</span></li><li><span><strong>N-BEATS (deep learning) was not deployed</strong>Lost to the naive model on every horizon; the rule requires a win with a 90 % block-bootstrap CI</span></li></ul>
         </div>
       </div>
-      <figure class="figura detalle__figura"><img src="/assets/img/mercado-al-dia.webp" width="1200" height="750" alt="Mercado al Día published page with this month's prices" decoding="async"><figcaption>Published page, generated by the project itself.</figcaption></figure>
+      <figure class="figura detalle__figura"><img src="/assets/img/mercado-al-dia.webp" width="1200" height="750" alt="NowMarket published page with this month's prices" decoding="async"><figcaption>Published page, generated by the project itself.</figcaption></figure>
     </header>
     <div class="capitulos">
       <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>It answers what is cheap this month, in which months each product usually rises and what it will cost in 1, 2 and 3 months, using wholesale prices for Bogotá and the Savannah with Corabastos as reference.</p></div></section>
       <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><ul><li>DANE SIPSA monthly wholesale price and supply series and NOAA CPC's ONI (El Niño) index.</li><li>Raw data is not redistributed: the script downloads it and records its SHA-256 fingerprint. Each price cites the file, sheet and row of the DANE spreadsheet.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>Seasonal profile with a 2×12 moving average on log prices.</li><li>LightGBM at 1 month and calibrated naive at 2 and 3 months, with 80 % intervals from conformal calibration (CQR).</li><li>SARIMAX with the ONI index gave no significant gain over naive; N-BEATS lost on every horizon.</li></ul></div></section>
-      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % bootstrap CI, and a single test (2023-11 to 2026-09).</li><li>Single-test results: 1 month, LightGBM, typical error 9.2 % and coverage 83.3 %; 2 months, calibrated naive, 16.0 % and 83.0 %; 3 months, 20.2 % and 82.6 %.</li><li>The &quot;usually goes up/down&quot; advice is right 78.2 % of the time vs. a 73.7 % baseline.</li><li>51 automated tests that run offline; in CI, 50 pass and 1 is skipped.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><ul><li>Seasonal profile with a 2×12 moving average on log prices.</li><li>Calibrated naive at 1, 2 and 3 months, with 80 % intervals from conformal calibration (CQR). LightGBM improved on validation but did not pass the deployment rule at 1 month (90 % CI [−0.7 %; +8.6 %]).</li><li>SARIMAX with the ONI index gave no significant gain over naive; N-BEATS lost on every horizon.</li></ul></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>Protocol fixed before seeing the test: leak-free rolling origin, selection on validation (2021-11 to 2023-10), a deployment rule with a 90 % block-bootstrap CI, and a test on 2023-11 to 2026-09. An independent audit found method errors (D-030); they were fixed and the test was rerun once, so it can no longer be used to decide again.</li><li>Test results (version 1.1.0): calibrated naive on all three horizons; 1 month, typical error 9.7 % and coverage 80.6 %; 2 months, 16.0 % and 82.8 %; 3 months, 20.2 % and 82.3 %.</li><li>The &quot;usually goes up/down&quot; advice is right 78.2 % of the time vs. a 73.7 % baseline.</li><li>72 automated tests that run offline. With JAX installed, 71 pass and 1 is a documented expected failure; on Windows, where CI does not install JAX, 3 N-BEATS tests are skipped and 68 pass.</li></ul></div></section>
       <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>SIPSA measures wholesale prices at the central market. Retail prices are higher; the tool anticipates rises, drops and seasons, not the exact shop price.</li><li>Not financial advice.</li></ul></div></section>
     </div>
     <p class="enlaces" style="margin:32px 0 0"><a href="https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md">AI usage documented in this project →</a></p>
@@ -97,7 +97,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md.</p>
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and NowMarket document this in docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
   </div>
 </footer>

@@ -35,7 +35,7 @@
     {
       "titulo": { "es": "Fuente con huella", "en": "Fingerprinted source" },
       "texto": { "es": "Cada dato apunta a su archivo, hoja, fila o línea y a su huella SHA-256. Si un archivo crudo cambia, el flujo se detiene.", "en": "Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops." },
-      "ejemplo": { "es": "Mercado al Día, Factura Viva", "en": "Mercado al Día, Factura Viva" }
+      "ejemplo": { "es": "NowMarket, Factura Viva", "en": "NowMarket, Factura Viva" }
     },
     {
       "titulo": { "es": "Supuestos como datos", "en": "Assumptions as data" },
@@ -45,7 +45,7 @@
     {
       "titulo": { "es": "Validación fijada antes de mirar", "en": "Validation fixed before looking" },
       "texto": { "es": "El protocolo se escribe antes de ver la prueba: origen rodante sin fuga, una prueba única y puntos de medición que nunca entran al entrenamiento.", "en": "The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training." },
-      "ejemplo": { "es": "Mercado al Día, Seguimiento de mirada", "en": "Mercado al Día, Gaze tracker" }
+      "ejemplo": { "es": "NowMarket, Seguimiento de mirada", "en": "NowMarket, Gaze tracker" }
     },
     {
       "titulo": { "es": "Mejor abstenerse que equivocarse", "en": "Better to abstain than to be wrong" },
@@ -136,14 +136,14 @@
     "es": "Google Data Analytics · IBM Data Analytics · Programa Especializado en Ciencia de Datos y Analítica Financiera (Uniandes) · Proceso Estadístico (DANE)",
     "en": "Google Data Analytics · IBM Data Analytics · Specialized Program in Data Science and Financial Analytics (Uniandes) · Statistical Process (DANE)"
   },
-  "herramientas": "Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Excel avanzado · R · Git",
-  "herramientasEn": "Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Advanced Excel · R · Git",
+  "herramientas": "Python (pandas, scikit-learn, LightGBM (evaluado en el experimento), statsmodels) · SQL · Power BI (DAX, Power Query) · Excel avanzado · R · Git",
+  "herramientasEn": "Python (pandas, scikit-learn, LightGBM (evaluated in the experiment), statsmodels) · SQL · Power BI (DAX, Power Query) · Advanced Excel · R · Git",
   "personal": {
     "es": "Fuera de los datos: fútbol, entrenamiento y cocina. Lo que sigo leyendo por gusto: física de partículas y tecnología nueva.",
     "en": "Away from data: football, training and cooking. What I keep reading for fun: particle physics and new technology."
   },
   "ia": {
-    "es": "Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y Mercado al Día lo documentan en docs/uso_de_ia.md.",
-    "en": "I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md."
+    "es": "Desarrollo con inteligencia artificial como asistente de programación. Las decisiones, los supuestos y la verificación son míos; Factura Viva, Nómina Clara y NowMarket lo documentan en docs/uso_de_ia.md.",
+    "en": "I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and NowMarket document this in docs/uso_de_ia.md."
   }
 }

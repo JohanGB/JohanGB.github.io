@@ -65,9 +65,9 @@
       </div>
       <div class="metricas">
         <div class="metrica">
-          <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9.2 %: source and method">9.2<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9.2 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>LightGBM, single held-out test 2023-11 to 2026-09 fixed in advance; leak-free rolling origin</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
+          <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="9.7 %: source and method">9.7<small>%</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="9.7 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>Calibrated naive (price stays, with an 80 % range), test 2023-11 to 2026-09 fixed in advance and already used twice; leak-free rolling origin; independent audit</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
           <p class="metrica__etiqueta">typical error of the 1-month forecast</p>
-          <p class="metrica__proyecto"><a href="/en/projects/mercado-al-dia.html">Mercado al Día</a></p>
+          <p class="metrica__proyecto"><a href="/en/projects/mercado-al-dia.html">NowMarket</a></p>
         </div>
         <div class="metrica">
           <div class="metrica__valor num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-2" aria-label="36 rules: source and method">36<small>rules</small></button><span class="ficha-traza" id="traza-2" role="group" aria-label="36 rules"><dl><dt>Source</dt><dd>Law 2466 of 2025, Law 2101 of 2021 and official texts (Función Pública, Constitutional Court, UGPP)</dd><dt>Method</dt><dd>Each rule stores value, validity, consultation date and quote; the loader rejects any rule marked verified without a primary source</dd></dl><a href="https://github.com/JohanGB/nomina-clara">See it in the repository →</a></span></span></div>
@@ -90,20 +90,20 @@
       <div class="proyectos">
 <article class="tarjeta" id="mercado-al-dia">
   <div>
-    <p class="etiqueta">Price forecasting · <span class="num">50</span> tests passing in CI</p>
-    <h3><a href="/en/projects/mercado-al-dia.html">Mercado al Día</a></h3>
+    <p class="etiqueta">Monthly wholesale prices · <span class="num">71</span> tests passing in CI</p>
+    <h3><a href="/en/projects/mercado-al-dia.html">NowMarket</a></h3>
     <p class="tarjeta__pregunta">What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</p>
     <ol class="flujo" aria-label="Data flow"><li><span>SIPSA and ONI</span></li><li><span>SHA-256 fingerprint</span></li><li><span>Clean panel</span></li><li><span>Rolling origin</span></li><li><span>Published page</span></li></ol>
-    <ul class="pila" aria-label="Stack"><li>Python</li><li>pandas</li><li>LightGBM</li><li>statsmodels</li><li>JAX</li></ul>
+    <ul class="pila" aria-label="Stack"><li>Python</li><li>pandas</li><li>LightGBM (evaluado)</li><li>statsmodels</li><li>JAX</li></ul>
     <div class="enlaces"><a href="/en/projects/mercado-al-dia.html">How it was built →</a><a href="https://github.com/JohanGB/NowMarket">Code</a><a href="/demo/mercado.html">Published page (Spanish)</a></div>
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-4" aria-label="9.2 %: source and method">9.2<small>%</small></button><span class="ficha-traza" id="traza-4" role="group" aria-label="9.2 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>LightGBM, single held-out test 2023-11 to 2026-09 fixed in advance; leak-free rolling origin</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-4" aria-label="9.7 %: source and method">9.7<small>%</small></button><span class="ficha-traza" id="traza-4" role="group" aria-label="9.7 %"><dl><dt>Source</dt><dd>SIPSA wholesale prices (DANE) and ONI index (NOAA)</dd><dt>Method</dt><dd>Calibrated naive (price stays, with an 80 % range), test 2023-11 to 2026-09 fixed in advance and already used twice; leak-free rolling origin; independent audit</dd></dl><a href="https://github.com/JohanGB/NowMarket">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">typical error of the 1-month forecast</p>
     </div>
-    <ul class="chequeos"><li><span><strong>80 % intervals that covered 82.6–83.3 %</strong>Conformal calibration (CQR) per horizon</span></li><li><span><strong>N-BEATS (deep learning) was not deployed</strong>Lost to the naive model on every horizon; the rule requires a win with a 90 % bootstrap CI</span></li></ul>
-    <p class="tarjeta__pie"><span><b class="num">50</b> tests passing in CI</span><span>Data: SIPSA (DANE), NOAA</span></p>
+    <ul class="chequeos"><li><span><strong>80 % intervals that covered 80.6–82.8 % in the test</strong>Conformal calibration (CQR) per horizon</span></li><li><span><strong>N-BEATS (deep learning) was not deployed</strong>Lost to the naive model on every horizon; the rule requires a win with a 90 % block-bootstrap CI</span></li></ul>
+    <p class="tarjeta__pie"><span><b class="num">71</b> tests passing in CI</span><span>Data: SIPSA (DANE), NOAA</span></p>
   </div>
 </article>
 <article class="tarjeta" id="factura-viva">
@@ -204,9 +204,9 @@
     <div class="contenedor">
       <div class="seccion__cabeza"><h2 class="seccion__titulo" id="t-metodo">How I work</h2><p class="seccion__nota">The same four steps in every project, so anyone can reproduce the result.</p></div>
       <ol class="pasos">
-        <li class="paso"><h3>Fingerprinted source</h3><p>Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops.</p><small>Where to see it: Mercado al Día, Factura Viva</small></li>
+        <li class="paso"><h3>Fingerprinted source</h3><p>Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops.</p><small>Where to see it: NowMarket, Factura Viva</small></li>
         <li class="paso"><h3>Assumptions as data</h3><p>Tax, labor and category rules live in versioned files with source, validity and verification status. Nothing legal is hard-coded.</p><small>Where to see it: Nómina Clara, Factura Viva</small></li>
-        <li class="paso"><h3>Validation fixed before looking</h3><p>The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training.</p><small>Where to see it: Mercado al Día, Gaze tracker</small></li>
+        <li class="paso"><h3>Validation fixed before looking</h3><p>The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training.</p><small>Where to see it: NowMarket, Gaze tracker</small></li>
         <li class="paso"><h3>Better to abstain than to be wrong</h3><p>Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun.</p><small>Where to see it: All six projects</small></li>
       </ol>
     </div>
@@ -247,7 +247,7 @@
         <li class="cargo"><div class="cargo__fechas num">01/2022 – 12/2023</div><div><h3>Academic Data Analyst</h3><p class="cargo__lugar">Universidad de los Andes · Bogotá</p><ul class="lista"><li>Academic tracking dashboards for 50+ students across 3 courses; tutoring and lab sessions in Python, C++ and statistical methods.</li></ul></div></li>
       </ol>
       <div class="extra">
-        <p><strong>Tools:</strong> Python (pandas, scikit-learn, LightGBM, statsmodels) · SQL · Power BI (DAX, Power Query) · Advanced Excel · R · Git</p>
+        <p><strong>Tools:</strong> Python (pandas, scikit-learn, LightGBM (evaluated in the experiment), statsmodels) · SQL · Power BI (DAX, Power Query) · Advanced Excel · R · Git</p>
         <p><strong>Certifications:</strong> Google Data Analytics · IBM Data Analytics · Specialized Program in Data Science and Financial Analytics (Uniandes) · Statistical Process (DANE)</p>
       </div>
     </div>
@@ -282,7 +282,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and Mercado al Día document this in docs/uso_de_ia.md.</p>
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and NowMarket document this in docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
   </div>
 </footer>

@@ -14,7 +14,7 @@ Sitio estático bilingüe (español en `/`, inglés en `/en/`), sin frameworks n
 | `herramientas/construir.mjs` | Genera las páginas HTML, `404.html`, `sitemap.xml` y `robots.txt` a partir de los JSON |
 | `assets/` | CSS, JS (fichas de trazabilidad, tema e idioma), fuentes autoalojadas e imágenes |
 | `cv/` | CV en español e inglés |
-| `demo/` | Página publicada de Mercado al Día (generada por ese proyecto) |
+| `demo/` | Página publicada de NowMarket (generada por ese proyecto) |
 
 Las páginas generadas (`index.html`, `en/`, `proyectos/`) se versionan para que GitHub Pages las sirva tal cual.
 
