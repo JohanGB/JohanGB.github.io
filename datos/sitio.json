@@ -16,8 +16,8 @@
     "en": ["Data tools that show where every number comes from.", "And how it was checked."]
   },
   "cuerpo": {
-    "es": "Seis proyectos propios con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas que cualquiera puede repetir.",
-    "en": "Six personal projects built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun."
+    "es": "Siete proyectos propios, en constante actualización, con datos reales de Colombia y software local: facturas de la DIAN, precios del DANE, normas laborales vigentes. En cada uno separo lo medido de lo supuesto, publico las limitaciones y dejo pruebas automáticas.",
+    "en": "Seven personal projects, continuously updated, built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests."
   },
   "ficha": [
     { "k": { "es": "Formación", "en": "Education" }, "v": { "es": "Física, Universidad de los Andes", "en": "B.Sc. Physics, Universidad de los Andes" } },
@@ -50,7 +50,7 @@
     {
       "titulo": { "es": "Mejor abstenerse que equivocarse", "en": "Better to abstain than to be wrong" },
       "texto": { "es": "Lo que no cuadra va a revisión en vez de adivinarse, y cada proyecto publica sus limitaciones y pruebas automáticas que cualquiera puede repetir.", "en": "Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun." },
-      "ejemplo": { "es": "Los seis proyectos", "en": "All six projects" }
+      "ejemplo": { "es": "Los seis proyectos con código público", "en": "The six projects with public code" }
     }
   ],
   "investigacion": [

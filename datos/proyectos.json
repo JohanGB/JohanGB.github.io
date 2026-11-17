@@ -71,6 +71,75 @@
       "uso_de_ia": "https://github.com/JohanGB/NowMarket/blob/main/docs/uso_de_ia.md"
     },
     {
+      "slug": "vektor-fx",
+      "nombre": { "es": "Vektor FX", "en": "Vektor FX" },
+      "tipo": { "es": "Pronóstico probabilístico de la TRM", "en": "Probabilistic forecasting of the COP/USD rate" },
+      "pregunta": {
+        "es": "¿Qué rango es razonable esperar para el dólar en Colombia, y qué tan confiable es ese rango?",
+        "en": "What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?"
+      },
+      "metrica": {
+        "valor": { "es": "0,977", "en": "0.977" },
+        "unidad": "CRPS/base",
+        "etiqueta": { "es": "a 1 día: la única hipótesis confirmada", "en": "at 1 day: the only confirmed hypothesis" },
+        "fuente": { "es": "Prueba final prerregistrada del proyecto (repositorio privado)", "en": "The project's preregistered final test (private repository)" },
+        "metodo": {
+          "es": "lightgbm_cuantiles a h = 1 frente a la línea base; prerregistro con candado por hash SHA-256 y auditoría independiente",
+          "en": "lightgbm_cuantiles at h = 1 vs. the baseline; preregistration locked by SHA-256 hash and independent audit"
+        },
+        "destacada": false
+      },
+      "comprobaciones": [
+        {
+          "resultado": { "es": "Prerregistro con candado por hash SHA-256", "en": "Preregistration locked by SHA-256 hash" },
+          "como": { "es": "Hipótesis fijadas antes de abrir los datos de prueba", "en": "Hypotheses fixed before opening the test data" }
+        },
+        {
+          "resultado": { "es": "Auditoría independiente", "en": "Independent audit" },
+          "como": { "es": "Revisión independiente de la prueba final", "en": "Independent review of the final test" }
+        }
+      ],
+      "pruebas": 365,
+      "ci": false,
+      "pila": ["Python", "pandas", "statsmodels", "arch", "LightGBM"],
+      "nota": { "es": "Código en revisión, se publicará próximamente", "en": "Code under review, to be published soon" },
+      "enlaces": {},
+      "flujo": {
+        "es": ["Prerregistro", "Candado SHA-256", "Prueba final", "1 hipótesis confirmada", "Auditoría independiente"],
+        "en": ["Preregistration", "SHA-256 lock", "Final test", "1 confirmed hypothesis", "Independent audit"]
+      },
+      "imagen": {
+        "src": "/assets/img/vektor-fx.webp", "ancho": 1200, "alto": 750,
+        "alt": { "es": "Serie diaria de la TRM de 1991 a 2026, con la prueba final desde 2020 resaltada en verde", "en": "Daily COP/USD rate from 1991 to 2026, with the final test from 2020 highlighted in green" },
+        "pie": {
+          "es": "TRM diaria, 1991-2026. Gris: datos de desarrollo; verde: prueba final prerregistrada, desde 2020. Datos de la Superintendencia Financiera.",
+          "en": "Daily COP/USD rate (TRM), 1991-2026. Grey: development data; green: preregistered final test, from 2020. Data from Colombia's Financial Superintendence."
+        }
+      },
+      "detalle": {
+        "problema": {
+          "es": ["Pone a prueba, con una sola prueba final fijada de antemano, modelos que describen la incertidumbre de la TRM (pesos por dólar)."],
+          "en": ["It tests models that describe the uncertainty of the TRM (Colombian pesos per US dollar) with a single final test fixed in advance."]
+        },
+        "datos": {
+          "es": ["Serie de la TRM (pesos por dólar)."],
+          "en": ["The TRM series (Colombian pesos per US dollar)."]
+        },
+        "metodo": {
+          "es": ["Prerregistro con candado por hash SHA-256: hipótesis y métricas fijadas antes de abrir los datos de prueba."],
+          "en": ["Preregistration locked by SHA-256 hash: hypotheses and metrics fixed before opening the test data."]
+        },
+        "validacion": {
+          "es": ["Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.", "Auditoría independiente de la prueba final.", "365 pruebas automáticas."],
+          "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "365 automated tests."]
+        },
+        "limitaciones": {
+          "es": ["Código en revisión, se publicará próximamente; mientras tanto, las cifras no se pueden verificar desde fuera.", "No es asesoría financiera; los rangos describen incertidumbre."],
+          "en": ["Code under review, to be published soon; until then, the numbers cannot be verified from outside.", "Not financial advice; the ranges describe uncertainty."]
+        }
+      }
+    },
+    {
       "slug": "factura-viva",
       "nombre": { "es": "Factura Viva", "en": "Factura Viva" },
       "tipo": { "es": "Finanzas personales y tributación", "en": "Personal finance and tax" },

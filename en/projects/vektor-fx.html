@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vektor FX · Johan García</title>
+<meta name="description" content="What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?">
+<meta name="author" content="Johan Esteban García Bautista">
+<link rel="canonical" href="https://johangb.github.io/en/projects/vektor-fx.html">
+<link rel="alternate" hreflang="es" href="https://johangb.github.io/proyectos/vektor-fx.html">
+<link rel="alternate" hreflang="en" href="https://johangb.github.io/en/projects/vektor-fx.html">
+<link rel="alternate" hreflang="x-default" href="https://johangb.github.io/proyectos/vektor-fx.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Johan García">
+<meta property="og:title" content="Vektor FX · Johan García">
+<meta property="og:description" content="What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?">
+<meta property="og:url" content="https://johangb.github.io/en/projects/vektor-fx.html">
+<meta property="og:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vektor FX · Johan García">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vektor FX · Johan García">
+<meta name="twitter:description" content="What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?">
+<meta name="twitter:image" content="https://johangb.github.io/assets/img/og-en.png">
+<meta name="theme-color" content="#F6F7F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1218" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibmplexsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fuentes.css">
+<link rel="stylesheet" href="/assets/css/sitio.css">
+<script>try{var t=localStorage.getItem('tema');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Skip to content</a><header class="barra">
+  <div class="contenedor barra__in">
+    <a class="barra__marca" href="/en/">Johan García</a>
+    <nav class="barra__nav" aria-label="Main navigation">
+      <a href="/en/#proyectos">Projects</a><a href="/en/#metodo">How I work</a><a href="/en/#investigacion">Research</a><a href="/en/#experiencia">Experience</a><a href="/en/#contacto">Contact</a>
+    </nav>
+    <div class="controles">
+      <div class="seg" role="group" aria-label="Language"><a href="/proyectos/vektor-fx.html" hreflang="es" lang="es" data-idioma="es">ES</a><a href="/en/projects/vektor-fx.html" hreflang="en" lang="en" data-idioma="en" aria-current="true">EN</a></div>
+      <button class="icono-btn" type="button" data-tema data-etiqueta-oscuro="Switch to dark theme" data-etiqueta-claro="Switch to light theme" aria-label="Switch to dark theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/#proyectos">Projects</a> / <span aria-current="page">Vektor FX</span></nav>
+    <header class="detalle__cabeza">
+      <p class="etiqueta">Probabilistic forecasting of the COP/USD rate · <span class="num">365</span> tests passing locally</p>
+      <h1 class="detalle__titulo">Vektor FX</h1>
+      <p class="detalle__pregunta">What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?</p>
+      <p class="seccion__nota" style="margin-bottom:48px">Code under review, to be published soon</p>
+      <div class="detalle__resumen">
+        <div>
+          <p class="etiqueta">Main result</p>
+          <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-1" aria-label="0.977 CRPS/base: source and method">0.977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-1" role="group" aria-label="0.977 CRPS/base"><dl><dt>Source</dt><dd>The project's preregistered final test (private repository)</dd><dt>Method</dt><dd>lightgbm_cuantiles at h = 1 vs. the baseline; preregistration locked by SHA-256 hash and independent audit</dd></dl></span></span></div>
+          <p class="tarjeta__grande-etiqueta">at 1 day: the only confirmed hypothesis</p>
+        </div>
+        <div>
+          <p class="etiqueta">How it was checked</p>
+          <ul class="chequeos"><li><span><strong>Preregistration locked by SHA-256 hash</strong>Hypotheses fixed before opening the test data</span></li><li><span><strong>Independent audit</strong>Independent review of the final test</span></li></ul>
+        </div>
+      </div>
+      <figure class="figura detalle__figura"><img src="/assets/img/vektor-fx.webp" width="1200" height="750" alt="Daily COP/USD rate from 1991 to 2026, with the final test from 2020 highlighted in green" decoding="async"><figcaption>Daily COP/USD rate (TRM), 1991-2026. Grey: development data; green: preregistered final test, from 2020. Data from Colombia's Financial Superintendence.</figcaption></figure>
+    </header>
+    <div class="capitulos">
+      <section class="capitulo" aria-labelledby="c-problema"><h2 id="c-problema"><span>01</span>Problem</h2><div class="capitulo__texto"><p>It tests models that describe the uncertainty of the TRM (Colombian pesos per US dollar) with a single final test fixed in advance.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-datos"><h2 id="c-datos"><span>02</span>Data</h2><div class="capitulo__texto"><p>The TRM series (Colombian pesos per US dollar).</p></div></section>
+      <section class="capitulo" aria-labelledby="c-metodo"><h2 id="c-metodo"><span>03</span>Method</h2><div class="capitulo__texto"><p>Preregistration locked by SHA-256 hash: hypotheses and metrics fixed before opening the test data.</p></div></section>
+      <section class="capitulo" aria-labelledby="c-validacion"><h2 id="c-validacion"><span>04</span>Validation</h2><div class="capitulo__texto"><ul><li>A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.</li><li>Independent audit of the final test.</li><li>365 automated tests.</li></ul></div></section>
+      <section class="capitulo capitulo--limites" aria-labelledby="c-limitaciones"><h2 id="c-limitaciones"><span>05</span>Limitations</h2><div class="capitulo__texto"><ul><li>Code under review, to be published soon; until then, the numbers cannot be verified from outside.</li><li>Not financial advice; the ranges describe uncertainty.</li></ul></div></section>
+    </div>
+    
+    <section class="seccion" style="margin-top:72px" aria-labelledby="t-otros">
+      <h2 class="etiqueta" id="t-otros">Other projects</h2>
+      <ul class="otros">
+        <li><a href="/en/projects/mercado-al-dia.html"><b>NowMarket</b><span>What is cheap this month at Bogotá's wholesale market, what will it cost next month, and what is worth waiting for?</span></a></li>
+        <li><a href="/en/projects/factura-viva.html"><b>Factura Viva</b><span>Where did the money go, how much really left my accounts, and how much can I deduct in income tax from my e-invoices?</span></a></li>
+        <li><a href="/en/projects/nomina-clara.html"><b>Nómina Clara</b><span>What does a shift, an overtime hour or a contract settlement really cost now that Colombia's Law 2466 changes the rules on staggered dates?</span></a></li>
+        <li><a href="/en/projects/mycents.html"><b>MyCents</b><span>Personal finance that lives on your device and backs up to Google Drive without ever overwriting your data.</span></a></li>
+        <li><a href="/en/projects/seguimiento-de-mirada.html"><b>Gaze tracker</b><span>Where on the screen are you looking, using only a webcam and without a single frame leaving the computer?</span></a></li>
+        <li><a href="/en/projects/huella.html"><b>Quietwatch</b><span>Which application is eating the computer's memory or CPU, without the measuring itself spending those same resources?</span></a></li>
+      </ul>
+      <p class="enlaces" style="margin-top:24px"><a href="/en/#proyectos">← All projects</a></p>
+    </section>
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and NowMarket document this in docs/uso_de_ia.md.</p>
+    <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
+  </div>
+</footer>
+<script src="/assets/js/sitio.js" defer></script>
+</body>
+</html>
