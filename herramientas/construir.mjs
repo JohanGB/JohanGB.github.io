@@ -14,6 +14,7 @@ const HOY = new Date().toISOString().slice(0, 10);
 // ---------- utilidades ----------
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const t = (x, l) => (x && typeof x === 'object' && !Array.isArray(x) ? x[l] : x);
+// "pruebas" admite un número o un texto por idioma ({"es": "más de 400", "en": "400+"}).
 // "ci": false en un proyecto cambia la etiqueta de pruebas (sin CI no se puede decir "en CI").
 const etqPruebas = (p, l) => (p.ci === false ? L[l].pruebasLocal : L[l].pruebas);
 const escribir = (rel, html) => {
@@ -185,7 +186,7 @@ function tarjeta(p, l) {
   const det = ruta(l, p.slug);
   return `<article class="tarjeta" id="${p.slug}">
   <div>
-    <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${etqPruebas(p, l)}</p>
+    <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${esc(t(p.pruebas, l))}</span> ${etqPruebas(p, l)}</p>
     <h3><a href="${det}">${esc(t(p.nombre, l))}</a></h3>
     <p class="tarjeta__pregunta">${esc(t(p.pregunta, l))}</p>
     <ol class="flujo" aria-label="${l === 'es' ? 'Flujo de datos' : 'Data flow'}">${p.flujo[l].map(x => `<li><span>${esc(x)}</span></li>`).join('')}</ol>
@@ -198,7 +199,7 @@ function tarjeta(p, l) {
       <p class="tarjeta__grande-etiqueta">${esc(t(p.metrica.etiqueta, l))}</p>
     </div>
     <ul class="chequeos">${p.comprobaciones.map(c => `<li><span><strong>${esc(t(c.resultado, l))}</strong>${esc(t(c.como, l))}</span></li>`).join('')}</ul>
-    <p class="tarjeta__pie"><span><b class="num">${p.pruebas}</b> ${etqPruebas(p, l)}</span><span>${esc(t(p.nota, l))}</span></p>
+    <p class="tarjeta__pie"><span><b class="num">${esc(t(p.pruebas, l))}</b> ${etqPruebas(p, l)}</span><span>${esc(t(p.nota, l))}</span></p>
   </div>
 </article>`;
 }
@@ -323,7 +324,7 @@ function detalle(p, l) {
   <div class="contenedor">
     <nav class="migas" aria-label="${l === 'es' ? 'Ruta' : 'Breadcrumb'}"><a href="${ruta(l)}">${L[l].inicio}</a> / <a href="${ruta(l)}#proyectos">${L[l].proyectos}</a> / <span aria-current="page">${esc(nombre)}</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${etqPruebas(p, l)}</p>
+      <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${esc(t(p.pruebas, l))}</span> ${etqPruebas(p, l)}</p>
       <h1 class="detalle__titulo">${esc(nombre)}</h1>
       <p class="detalle__pregunta">${esc(t(p.pregunta, l))}</p>
       ${p.enlaces?.codigo ? `<div class="portada__cta" style="margin-bottom:48px">

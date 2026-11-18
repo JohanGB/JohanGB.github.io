@@ -99,7 +99,7 @@
           "como": { "es": "Revisión independiente de la prueba final", "en": "Independent review of the final test" }
         }
       ],
-      "pruebas": 370,
+      "pruebas": { "es": "más de 400", "en": "400+" },
       "ci": true,
       "pila": ["Python", "pandas", "statsmodels", "arch", "LightGBM"],
       "nota": { "es": "No es asesoría financiera", "en": "Not financial advice" },
@@ -130,8 +130,8 @@
           "en": ["Preregistration locked by SHA-256 hash: hypotheses and metrics fixed before opening the test data."]
         },
         "validacion": {
-          "es": ["Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.", "Auditoría independiente de la prueba final.", "372 pruebas automáticas; 370 corren en CI (GitHub Actions) en cada cambio."],
-          "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "372 automated tests; 370 run in CI (GitHub Actions) on every change."]
+          "es": ["Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.", "Auditoría independiente de la prueba final.", "Más de 400 pruebas automáticas en CI (GitHub Actions), en cada cambio."],
+          "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "More than 400 automated tests in CI (GitHub Actions), on every change."]
         },
         "limitaciones": {
           "es": ["No es asesoría financiera; los rangos describen incertidumbre."],
