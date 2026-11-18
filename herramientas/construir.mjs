@@ -14,6 +14,8 @@ const HOY = new Date().toISOString().slice(0, 10);
 // ---------- utilidades ----------
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const t = (x, l) => (x && typeof x === 'object' && !Array.isArray(x) ? x[l] : x);
+// "ci": false en un proyecto cambia la etiqueta de pruebas (sin CI no se puede decir "en CI").
+const etqPruebas = (p, l) => (p.ci === false ? L[l].pruebasLocal : L[l].pruebas);
 const escribir = (rel, html) => {
   const f = path.join(RAIZ, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
@@ -27,7 +29,7 @@ const L = {
     saltar: 'Saltar al contenido', nav: 'Navegación principal', proyectos: 'Proyectos', metodo: 'Cómo trabajo', investigacion: 'Investigación',
     experiencia: 'Experiencia', contacto: 'Contacto', idioma: 'Idioma', temaOscuro: 'Cambiar a tema oscuro', temaClaro: 'Cambiar a tema claro',
     cv: 'Descargar CV', cvOtro: 'CV en inglés', escribir: 'Escribirme', pista: 'Las cifras subrayadas con puntos muestran su fuente y su método al pasar el cursor, al enfocarlas o al tocarlas.',
-    fuente: 'Fuente', metodoK: 'Método', verRepo: 'Ver en el repositorio →', pruebas: 'pruebas en CI', codigo: 'Código', demo: 'Página publicada',
+    fuente: 'Fuente', metodoK: 'Método', verRepo: 'Ver en el repositorio →', pruebas: 'pruebas en CI', pruebasLocal: 'pruebas locales', codigo: 'Código', demo: 'Página publicada',
     comoSeHizo: 'Cómo se hizo →', proyectosNota: 'Cada tarjeta muestra la pregunta que resuelve, su cifra principal y cómo se comprobó.',
     metodoNota: 'Los mismos cuatro pasos en cada proyecto, para que cualquiera pueda repetir el resultado.', ejemplo: 'Dónde se ve',
     investigacionNota: 'Antes de los datos de negocio, la física: simulación, estadística y contraste con datos experimentales.',
@@ -43,7 +45,7 @@ const L = {
     saltar: 'Skip to content', nav: 'Main navigation', proyectos: 'Projects', metodo: 'How I work', investigacion: 'Research',
     experiencia: 'Experience', contacto: 'Contact', idioma: 'Language', temaOscuro: 'Switch to dark theme', temaClaro: 'Switch to light theme',
     cv: 'Download CV', cvOtro: 'CV in Spanish', escribir: 'Email me', pista: 'Numbers with a dotted underline show their source and method on hover, focus or tap.',
-    fuente: 'Source', metodoK: 'Method', verRepo: 'See it in the repository →', pruebas: 'tests passing in CI', codigo: 'Code', demo: 'Published page (Spanish)',
+    fuente: 'Source', metodoK: 'Method', verRepo: 'See it in the repository →', pruebas: 'tests passing in CI', pruebasLocal: 'tests passing locally', codigo: 'Code', demo: 'Published page (Spanish)',
     comoSeHizo: 'How it was built →', proyectosNota: 'Each card shows the question it answers, its main number and how it was checked.',
     metodoNota: 'The same four steps in every project, so anyone can reproduce the result.', ejemplo: 'Where to see it',
     investigacionNota: 'Before business data, physics: simulation, statistics and comparison against experimental data.',
@@ -183,20 +185,20 @@ function tarjeta(p, l) {
   const det = ruta(l, p.slug);
   return `<article class="tarjeta" id="${p.slug}">
   <div>
-    <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${L[l].pruebas}</p>
+    <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${etqPruebas(p, l)}</p>
     <h3><a href="${det}">${esc(t(p.nombre, l))}</a></h3>
     <p class="tarjeta__pregunta">${esc(t(p.pregunta, l))}</p>
     <ol class="flujo" aria-label="${l === 'es' ? 'Flujo de datos' : 'Data flow'}">${p.flujo[l].map(x => `<li><span>${esc(x)}</span></li>`).join('')}</ol>
     <ul class="pila" aria-label="${l === 'es' ? 'Tecnologías' : 'Stack'}">${p.pila.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-    <div class="enlaces"><a href="${det}">${L[l].comoSeHizo}</a><a href="${p.enlaces.codigo}">${L[l].codigo}</a>${p.enlaces.demo ? `<a href="${p.enlaces.demo}">${L[l].demo}</a>` : ''}</div>
+    <div class="enlaces"><a href="${det}">${L[l].comoSeHizo}</a>${p.enlaces?.codigo ? `<a href="${p.enlaces.codigo}">${L[l].codigo}</a>` : ''}${p.enlaces?.demo ?`<a href="${p.enlaces.demo}">${L[l].demo}</a>` : ''}</div>
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num">${cifra(p.metrica, l, p.enlaces.codigo)}</div>
+      <div class="tarjeta__grande num">${cifra(p.metrica, l, p.enlaces?.codigo)}</div>
       <p class="tarjeta__grande-etiqueta">${esc(t(p.metrica.etiqueta, l))}</p>
     </div>
     <ul class="chequeos">${p.comprobaciones.map(c => `<li><span><strong>${esc(t(c.resultado, l))}</strong>${esc(t(c.como, l))}</span></li>`).join('')}</ul>
-    <p class="tarjeta__pie"><span><b class="num">${p.pruebas}</b> ${L[l].pruebas}</span><span>${esc(t(p.nota, l))}</span></p>
+    <p class="tarjeta__pie"><span><b class="num">${p.pruebas}</b> ${etqPruebas(p, l)}</span><span>${esc(t(p.nota, l))}</span></p>
   </div>
 </article>`;
 }
@@ -224,7 +226,7 @@ function inicio(l) {
       </div>
       <div class="metricas">
 ${destacadas.map((p, i) => `        <div class="metrica">
-          <div class="metrica__valor num">${cifra(p.metrica, l, p.enlaces.codigo, i === destacadas.length - 1 ? ' cifra--final' : '')}</div>
+          <div class="metrica__valor num">${cifra(p.metrica, l, p.enlaces?.codigo, i ===destacadas.length - 1 ? ' cifra--final' : '')}</div>
           <p class="metrica__etiqueta">${esc(t(p.metrica.etiqueta, l))}</p>
           <p class="metrica__proyecto"><a href="${ruta(l, p.slug)}">${esc(t(p.nombre, l))}</a></p>
         </div>`).join('\n')}
@@ -321,17 +323,17 @@ function detalle(p, l) {
   <div class="contenedor">
     <nav class="migas" aria-label="${l === 'es' ? 'Ruta' : 'Breadcrumb'}"><a href="${ruta(l)}">${L[l].inicio}</a> / <a href="${ruta(l)}#proyectos">${L[l].proyectos}</a> / <span aria-current="page">${esc(nombre)}</span></nav>
     <header class="detalle__cabeza">
-      <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${L[l].pruebas}</p>
+      <p class="etiqueta">${esc(t(p.tipo, l))} · <span class="num">${p.pruebas}</span> ${etqPruebas(p, l)}</p>
       <h1 class="detalle__titulo">${esc(nombre)}</h1>
       <p class="detalle__pregunta">${esc(t(p.pregunta, l))}</p>
-      <div class="portada__cta" style="margin-bottom:48px">
+      ${p.enlaces?.codigo ? `<div class="portada__cta" style="margin-bottom:48px">
         <a class="btn btn--primario" href="${p.enlaces.codigo}">${L[l].codigo}</a>
         ${p.enlaces.demo ? `<a class="btn" href="${p.enlaces.demo}">${L[l].demo}</a>` : ''}
-      </div>
+      </div>` : `<p class="seccion__nota" style="margin-bottom:48px">${esc(t(p.nota, l))}</p>`}
       <div class="detalle__resumen">
         <div>
           <p class="etiqueta">${L[l].resultado}</p>
-          <div class="tarjeta__grande num">${cifra(p.metrica, l, p.enlaces.codigo)}</div>
+          <div class="tarjeta__grande num">${cifra(p.metrica, l, p.enlaces?.codigo)}</div>
           <p class="tarjeta__grande-etiqueta">${esc(t(p.metrica.etiqueta, l))}</p>
         </div>
         <div>
@@ -381,16 +383,21 @@ for (const p of P) {
     for (const k of ['problema', 'datos', 'metodo', 'validacion', 'limitaciones']) if (!p.detalle?.[k]?.[l]?.length) errores.push(`${p.slug}: falta detalle.${k}.${l}`);
   }
   if (p.imagen && !fs.existsSync(path.join(RAIZ, p.imagen.src))) errores.push(`${p.slug}: no existe ${p.imagen.src}`);
+  if (!p.enlaces?.codigo && !IDIOMAS.every(l => t(p.nota, l))) errores.push(`${p.slug}: sin enlaces.codigo, la nota (es y en) es obligatoria: explica por qué no hay código.`);
 }
 if (new Set(P.map(p => p.slug)).size !== P.length) errores.push('Hay slugs repetidos.');
 if (errores.length) { console.error('Errores en los datos:\n- ' + errores.join('\n- ')); process.exit(1); }
 
 // ---------- escritura ----------
+// Se generan todas las páginas en memoria y se revisan antes de escribir nada.
+const paginas = [['404.html', noEncontrada()]];
 for (const l of IDIOMAS) {
-  escribir(archivo(l), inicio(l));
-  for (const p of P) escribir(archivo(l, p.slug), detalle(p, l));
+  paginas.push([archivo(l), inicio(l)]);
+  for (const p of P) paginas.push([archivo(l, p.slug), detalle(p, l)]);
 }
-escribir('404.html', noEncontrada());
+const rotas = paginas.filter(([, html]) => /undefined|="null"/.test(html)).map(([f]) => f);
+if (rotas.length) { console.error('Valores sin definir en: ' + rotas.join(', ')); process.exit(1); }
+for (const [f, html] of paginas) escribir(f, html);
 
 const urls = [null, ...P.map(p => p.slug)].flatMap(slug => IDIOMAS.map(l => `  <url>
     <loc>${S.url + ruta(l, slug)}</loc>

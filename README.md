@@ -23,6 +23,8 @@ Las páginas generadas (`index.html`, `en/`, `proyectos/`) se versionan para que
 1. Copia un objeto de `datos/proyectos.json` y cambia los textos en `es` y `en`.
 2. La cifra principal necesita `fuente` y `metodo`; si no los tienes, no la publiques.
    Marca `"destacada": true` solo si debe aparecer en la portada (máximo 3).
+   Si el código aún no es público, deja `"enlaces": {}` y explica el motivo en `nota` (es y en):
+   la nota reemplaza el botón «Código». Si no hay CI, `"ci": false` cambia «pruebas en CI» por «pruebas locales».
 3. Si tiene imagen, ponla en `assets/img/` en WebP e indica `ancho` y `alto`.
 4. Ejecuta `node herramientas/construir.mjs`. El script se detiene si falta algún dato obligatorio.
 

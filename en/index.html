@@ -57,7 +57,7 @@
       <h1 class="portada__nombre" id="nombre">Johan Esteban García Bautista</h1>
       <p class="portada__promesa">Data tools that show where every number comes from. <em>And how it was checked.</em></p>
       <p class="portada__rol">Physicist and data analyst. Looking for actuarial and data roles in insurance and banking.</p>
-      <p class="portada__cuerpo">Six personal projects built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun.</p>
+      <p class="portada__cuerpo">Seven personal projects, continuously updated, built on real Colombian data and local software: DIAN e-invoices, DANE prices, current labor law. In each one I separate what was measured from what was assumed, publish the limitations, and ship automated tests anyone can rerun.</p>
       <div class="portada__cta">
         <a class="btn btn--primario" href="/cv/GarciaJohan_CV_Data_EN.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" stroke-linecap="round" stroke-linejoin="round"/></svg>Download CV</a>
         <a class="btn" href="mailto:johanesteban2003@gmail.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5 8 9l5.5-4.5" stroke-linejoin="round"/></svg>Email me</a>
@@ -106,6 +106,24 @@
     <p class="tarjeta__pie"><span><b class="num">71</b> tests passing in CI</span><span>Data: SIPSA (DANE), NOAA</span></p>
   </div>
 </article>
+<article class="tarjeta" id="vektor-fx">
+  <div>
+    <p class="etiqueta">Probabilistic forecasting of the COP/USD rate · <span class="num">370</span> tests passing in CI</p>
+    <h3><a href="/en/projects/vektor-fx.html">Vektor FX</a></h3>
+    <p class="tarjeta__pregunta">What range is reasonable to expect for the dollar in Colombia, and how reliable is that range?</p>
+    <ol class="flujo" aria-label="Data flow"><li><span>Preregistration</span></li><li><span>SHA-256 lock</span></li><li><span>Final test</span></li><li><span>1 confirmed hypothesis</span></li><li><span>Independent audit</span></li></ol>
+    <ul class="pila" aria-label="Stack"><li>Python</li><li>pandas</li><li>statsmodels</li><li>arch</li><li>LightGBM</li></ul>
+    <div class="enlaces"><a href="/en/projects/vektor-fx.html">How it was built →</a><a href="https://github.com/JohanGB/laboratorio-escenarios">Code</a></div>
+  </div>
+  <div class="tarjeta__lado">
+    <div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-5" aria-label="0.977 CRPS/base: source and method">0.977<small>CRPS/base</small></button><span class="ficha-traza" id="traza-5" role="group" aria-label="0.977 CRPS/base"><dl><dt>Source</dt><dd>The project's preregistered final test (reports/prueba_final.md)</dd><dt>Method</dt><dd>lightgbm_cuantiles at h = 1 vs. the baseline; preregistration locked by SHA-256 hash and independent audit</dd></dl><a href="https://github.com/JohanGB/laboratorio-escenarios">See it in the repository →</a></span></span></div>
+      <p class="tarjeta__grande-etiqueta">at 1 day: the only confirmed hypothesis</p>
+    </div>
+    <ul class="chequeos"><li><span><strong>Preregistration locked by SHA-256 hash</strong>Hypotheses fixed before opening the test data</span></li><li><span><strong>Independent audit</strong>Independent review of the final test</span></li></ul>
+    <p class="tarjeta__pie"><span><b class="num">370</b> tests passing in CI</span><span>Not financial advice</span></p>
+  </div>
+</article>
 <article class="tarjeta" id="factura-viva">
   <div>
     <p class="etiqueta">Personal finance and tax · <span class="num">93</span> tests passing in CI</p>
@@ -117,7 +135,7 @@
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-5" aria-label="9 checks: source and method">9<small>checks</small></button><span class="ficha-traza" id="traza-5" role="group" aria-label="9 checks"><dl><dt>Source</dt><dd>DIAN e-invoices (UBL 2.1 XML) and PDF bank statements</dd><dt>Method</dt><dd>Lines plus taxes equal total, CUFE and DIAN validation; each row points to its file and SHA-256 fingerprint</dd></dl><a href="https://github.com/JohanGB/billive">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-6" aria-label="9 checks: source and method">9<small>checks</small></button><span class="ficha-traza" id="traza-6" role="group" aria-label="9 checks"><dl><dt>Source</dt><dd>DIAN e-invoices (UBL 2.1 XML) and PDF bank statements</dd><dt>Method</dt><dd>Lines plus taxes equal total, CUFE and DIAN validation; each row points to its file and SHA-256 fingerprint</dd></dl><a href="https://github.com/JohanGB/billive">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">per DIAN invoice parsed straight from the email ZIP</p>
     </div>
     <ul class="chequeos"><li><span><strong>Statements from 5 bank products</strong>Opening balance plus movements must equal closing balance; otherwise it goes to review instead of guessing</span></li><li><span><strong>1 % income tax deduction (art. 336-5)</strong>Tax rules as data with source and validity; each row points to its file and SHA-256 fingerprint</span></li></ul>
@@ -135,7 +153,7 @@
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-6" aria-label="36 rules: source and method">36<small>rules</small></button><span class="ficha-traza" id="traza-6" role="group" aria-label="36 rules"><dl><dt>Source</dt><dd>Law 2466 of 2025, Law 2101 of 2021 and official texts (Función Pública, Constitutional Court, UGPP)</dd><dt>Method</dt><dd>Each rule stores value, validity, consultation date and quote; the loader rejects any rule marked verified without a primary source</dd></dl><a href="https://github.com/JohanGB/nomina-clara">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-7" aria-label="36 rules: source and method">36<small>rules</small></button><span class="ficha-traza" id="traza-7" role="group" aria-label="36 rules"><dl><dt>Source</dt><dd>Law 2466 of 2025, Law 2101 of 2021 and official texts (Función Pública, Constitutional Court, UGPP)</dd><dt>Method</dt><dd>Each rule stores value, validity, consultation date and quote; the loader rejects any rule marked verified without a primary source</dd></dl><a href="https://github.com/JohanGB/nomina-clara">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">with norm, article, official URL and literal quote</p>
     </div>
     <ul class="chequeos"><li><span><strong>Surcharges computed minute by minute with the rule in force that day</strong>36 rules with norm, article, official URL, consultation date and literal quote</span></li><li><span><strong>Full settlement: severance, interest, bonus, vacation and indemnity</strong>The loader rejects any rule marked verified without a primary source</span></li></ul>
@@ -153,7 +171,7 @@
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-7" aria-label="11 ms: source and method">11<small>ms</small></button><span class="ficha-traza" id="traza-7" role="group" aria-label="11 ms"><dl><dt>Source</dt><dd>Synthetic database of 1,000,000 expenses over 10 years (104 MB)</dd><dt>Method</dt><dd>Covering SQLite index vs. 1,133 ms and 364 MB loading everything into pandas</dd></dl><a href="https://github.com/JohanGB/App_HomeFinance">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-8" aria-label="11 ms: source and method">11<small>ms</small></button><span class="ficha-traza" id="traza-8" role="group" aria-label="11 ms"><dl><dt>Source</dt><dd>Synthetic database of 1,000,000 expenses over 10 years (104 MB)</dd><dt>Method</dt><dd>Covering SQLite index vs. 1,133 ms and 364 MB loading everything into pandas</dd></dl><a href="https://github.com/JohanGB/App_HomeFinance">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">monthly view over one million expenses</p>
     </div>
     <ul class="chequeos"><li><span><strong>Sync that never merges blindly</strong>Local/remote matrix with explicit conflicts; downloads validated with MD5 and integrity checks before replacing</span></li></ul>
@@ -171,7 +189,7 @@
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-8" aria-label="87 px: source and method">87<small>px</small></button><span class="ficha-traza" id="traza-8" role="group" aria-label="87 px"><dl><dt>Source</dt><dd>Simulator with known ground truth, 1920×1080 screen</dd><dt>Method</dt><dd>3D eye geometry vs. the classic method; median error</dd></dl><a href="https://github.com/JohanGB/visual-follower">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-9" aria-label="87 px: source and method">87<small>px</small></button><span class="ficha-traza" id="traza-9" role="group" aria-label="87 px"><dl><dt>Source</dt><dd>Simulator with known ground truth, 1920×1080 screen</dd><dt>Method</dt><dd>3D eye geometry vs. the classic method; median error</dd></dl><a href="https://github.com/JohanGB/visual-follower">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">error with the head turned 20° (was 532 px)</p>
     </div>
     <ul class="chequeos"><li><span><strong>Honest validation</strong>Fixed points never enter training; accuracy and jitter are reported separately</span></li></ul>
@@ -189,7 +207,7 @@
   </div>
   <div class="tarjeta__lado">
     <div>
-      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-9" aria-label="0 ms: source and method">0<small>ms</small></button><span class="ficha-traza" id="traza-9" role="group" aria-label="0 ms"><dl><dt>Source</dt><dd>Daemon measurement on a 2-vCPU Linux VM (Python 3.13, psutil 7.2)</dd><dt>Method</dt><dd>Process observed from outside with tools/bench.py: CPU, context switches and bytes written</dd></dl><a href="https://github.com/JohanGB/quietwatch">See it in the repository →</a></span></span></div>
+      <div class="tarjeta__grande num"><span class="cifra"><button class="cifra__btn" type="button" aria-expanded="false" aria-controls="traza-10" aria-label="0 ms: source and method">0<small>ms</small></button><span class="ficha-traza" id="traza-10" role="group" aria-label="0 ms"><dl><dt>Source</dt><dd>Daemon measurement on a 2-vCPU Linux VM (Python 3.13, psutil 7.2)</dd><dt>Method</dt><dd>Process observed from outside with tools/bench.py: CPU, context switches and bytes written</dd></dl><a href="https://github.com/JohanGB/quietwatch">See it in the repository →</a></span></span></div>
       <p class="tarjeta__grande-etiqueta">of CPU over 5 minutes of Gaming mode</p>
     </div>
     <ul class="chequeos"><li><span><strong>Leaks detected in 99.4–100 % of cases</strong>5,000 synthetic 30-minute series; 0 % alerts on stable series</span></li></ul>
@@ -207,7 +225,7 @@
         <li class="paso"><h3>Fingerprinted source</h3><p>Every value points to its file, sheet, row or line and its SHA-256 fingerprint. If a raw file changes, the pipeline stops.</p><small>Where to see it: NowMarket, Factura Viva</small></li>
         <li class="paso"><h3>Assumptions as data</h3><p>Tax, labor and category rules live in versioned files with source, validity and verification status. Nothing legal is hard-coded.</p><small>Where to see it: Nómina Clara, Factura Viva</small></li>
         <li class="paso"><h3>Validation fixed before looking</h3><p>The protocol is written before seeing the test: leak-free rolling origin, a single held-out test and measurement points that never enter training.</p><small>Where to see it: NowMarket, Gaze tracker</small></li>
-        <li class="paso"><h3>Better to abstain than to be wrong</h3><p>Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun.</p><small>Where to see it: All six projects</small></li>
+        <li class="paso"><h3>Better to abstain than to be wrong</h3><p>Whatever does not reconcile goes to review instead of being guessed, and every project publishes its limitations and automated tests anyone can rerun.</p><small>Where to see it: All seven projects</small></li>
       </ol>
     </div>
   </section>
@@ -282,7 +300,7 @@
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara and NowMarket document this in docs/uso_de_ia.md.</p>
+    <p>I build with AI as a programming assistant. Decisions, assumptions and verification are mine; Factura Viva, Nómina Clara, NowMarket and Vektor FX document this in docs/uso_de_ia.md.</p>
     <p>© 2026 Johan Esteban García Bautista · <a href="https://github.com/JohanGB/JohanGB.github.io">Source of this site</a></p>
   </div>
 </footer>
