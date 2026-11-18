@@ -99,8 +99,8 @@
           "como": { "es": "Revisión independiente de la prueba final", "en": "Independent review of the final test" }
         }
       ],
-      "pruebas": 365,
-      "ci": false,
+      "pruebas": 370,
+      "ci": true,
       "pila": ["Python", "pandas", "statsmodels", "arch", "LightGBM"],
       "nota": { "es": "No es asesoría financiera", "en": "Not financial advice" },
       "enlaces": { "codigo": "https://github.com/JohanGB/laboratorio-escenarios" },
@@ -130,12 +130,12 @@
           "en": ["Preregistration locked by SHA-256 hash: hypotheses and metrics fixed before opening the test data."]
         },
         "validacion": {
-          "es": ["Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.", "Auditoría independiente de la prueba final.", "365 pruebas automáticas."],
-          "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "365 automated tests."]
+          "es": ["Una sola hipótesis confirmada: lightgbm_cuantiles a h = 1, CRPS/base 0,977.", "Auditoría independiente de la prueba final.", "372 pruebas automáticas; 370 corren en CI (GitHub Actions) en cada cambio."],
+          "en": ["A single confirmed hypothesis: lightgbm_cuantiles at h = 1, CRPS/base 0.977.", "Independent audit of the final test.", "372 automated tests; 370 run in CI (GitHub Actions) on every change."]
         },
         "limitaciones": {
-          "es": ["No hay CI: las 365 pruebas se corren en local con pytest.", "No es asesoría financiera; los rangos describen incertidumbre."],
-          "en": ["There is no CI: the 365 tests are run locally with pytest.", "Not financial advice; the ranges describe uncertainty."]
+          "es": ["No es asesoría financiera; los rangos describen incertidumbre."],
+          "en": ["Not financial advice; the ranges describe uncertainty."]
         }
       },
       "uso_de_ia": "https://github.com/JohanGB/laboratorio-escenarios/blob/main/docs/uso_de_ia.md"
